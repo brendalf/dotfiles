@@ -1,4 +1,3 @@
-!#/bin/bash
 # move to temporary folder
 cd /tmp
 

@@ -1,0 +1,59 @@
+"------------------------------------------------------------------------------
+" Plugins
+"------------------------------------------------------------------------------
+" Initialize plugin system
+call plug#begin('~/.vim/plugged')
+Plug 'elzr/vim-json'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+" Plug 'dracula/vim'
+Plug 'mxw/vim-jsx'
+Plug 'neoclide/coc.nvim'
+Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
+Plug 'jiangmiao/auto-pairs'
+Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'jlanzarotta/bufexplorer'
+if has('nvim')
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins'  }
+else
+    Plug 'Shougo/defx.nvim'
+    Plug 'Shougo/denite.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+call plug#end()
+
+"------------------------------------------------------------------------------
+" Plugin Configuration
+"------------------------------------------------------------------------------
+" vim-json
+let g:vim_json_syntax_conceal = 0
+
+" status line
+if !exists('*fugitive#statusline')
+    set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
+    set statusline+=%=
+    set statusline+=%{fugitive#statusline()}
+endif
+
+" jsx 
+let g:jsx_ext_required = 0
+
+" tern
+" disable auto preview window
+set completeopt-=preview
+
+" localvimrc
+let g:localvimrc_ask = 0
+
+" devicons
+set guifont=Sauce\ Code\ Pro\ Light\ Nerd\ Font\ Complete\ Windows\ Compatible:h11
+let g:webdevicons_enable_vimfiler = 1
+
+source ~/.config/nvim/plugins/coc.rc.vim
+source ~/.config/nvim/plugins/defx.rc.vim
+source ~/.config/nvim/plugins/denite.rc.vim
+

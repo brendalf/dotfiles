@@ -20,6 +20,7 @@ chmod +x install.sh
 ./install.sh Meslo
 ./install.sh FiraCode
 ./install.sh FiraMono
+./install.sh SourceCodePro
 
 # install plugins
 fisher install gazorby/fish-abbreviation-tips

@@ -3,11 +3,8 @@
 "------------------------------------------------------------------------------
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
-Plug 'elzr/vim-json'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-" Plug 'dracula/vim'
-Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim'
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
@@ -15,15 +12,29 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'danilo-augusto/vim-afterglow'
 if has('nvim')
-    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins'  }
+    Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
+    Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
 else
     Plug 'Shougo/defx.nvim'
     Plug 'Shougo/denite.nvim'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+" Initialize lazy plugins
+Plug 'elzr/vim-json', {'for': 'json'}
+Plug 'cespare/vim-toml', {'for': 'toml'}
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+Plug 'dag/vim-fish', {'for': 'fish'}
+Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'stephpy/vim-yaml', {'for': 'yaml'}
+Plug 'groenewege/vim-less', {'for': 'less'}
+
+Plug 'yuezk/vim-js', {'for': ['javascript', 'javascript.jsx']}
+Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
+Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascript', 'javascript.jsx']}
 call plug#end()
 
 "------------------------------------------------------------------------------
@@ -48,6 +59,10 @@ set completeopt-=preview
 
 " localvimrc
 let g:localvimrc_ask = 0
+
+" onehalf
+" let g:airline_theme='afterglow'
+let g:afterglow_inherit_background=1
 
 " devicons
 set guifont=Sauce\ Code\ Pro\ Light\ Nerd\ Font\ Complete\ Windows\ Compatible:h11

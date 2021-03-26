@@ -6,7 +6,7 @@ mv .tmux.conf.osx ~/.tmux.conf.osx
 mv .tmux.powerline.conf ~/.tmux.powerline.conf
 
 # Install Powerline
-pip install --user powerline-status
+python3 -m pip install --user powerline-status
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 mv PowerlineSymbols.otf ~/.local/share/fonts/

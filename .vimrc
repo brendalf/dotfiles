@@ -16,16 +16,23 @@ set encoding=utf-8
 set autoindent
 set background=dark
 set nobackup
+set nowritebackup
 set hlsearch
 set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
+set clipboard=unnamedplus
 set expandtab
+set updatetime=300
+set timeoutlen=100
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
-" title configs
+" saving as root
+"cmap w! w !sudo tee %
+
+"title configs
 set title
 set titleold=
 
@@ -33,6 +40,9 @@ set titleold=
 if has('nvim')
     set inccommand=split
 endif
+
+" auto source vim files
+" au! BufWritePost $MYVIMRC source %
 
 " suppress appending <PasteStart> and <PasteEnd> when pasting
 set t_BE=

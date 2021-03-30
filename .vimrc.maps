@@ -2,7 +2,7 @@
 " Tabs
 "--------------------------------------------------------
 " Open current directory
-nmap te :tabedit
+nmap te :tabedit<Return>
 " List tabs
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
@@ -28,3 +28,18 @@ nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+
+"---------------------------------------------------------
+" Productivity
+"---------------------------------------------------------
+" Replace 
+nmap <C-h> :%s/
+" Save
+nmap <C-s> :w<Return>
+" Close
+nmap <C-q> :q<Return>
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+" Ctrl c instead of escape
+vnoremap <C-c> <Esc>

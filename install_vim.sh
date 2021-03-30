@@ -4,6 +4,7 @@
 sudo apt install silversearcher-ag
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 python3 -m pip install pynvim
+sudo npm install -g neovim
 
 # instalando vim
 sudo add-apt-repository ppa:jonathonf/vim
@@ -30,4 +31,3 @@ cp -r .config/nvim .config
 # instalando o vim plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-

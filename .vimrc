@@ -24,8 +24,8 @@ set laststatus=2
 set scrolloff=10
 set clipboard=unnamedplus
 set expandtab
-set updatetime=300
-set timeoutlen=100
+"set updatetime=300
+"set timeoutlen=100
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 

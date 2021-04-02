@@ -9,4 +9,4 @@ git config --global alias.l log
 git config --global alias.lo "log --oneline"
 git config --global alias.d diff
 git config --global alias.a add
-git config --global alias.gap "checkout -p"
+git config --global alias.gap "add -p"

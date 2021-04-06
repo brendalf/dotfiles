@@ -13,6 +13,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'danilo-augusto/vim-afterglow'
+Plug 'preservim/nerdcommenter'
+Plug 'mhinz/vim-signify'
 if has('nvim')
     Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
     Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
@@ -23,7 +25,7 @@ else
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-" Initialize lazy plugins
+" Initialize lazy plugin
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
@@ -33,7 +35,7 @@ Plug 'stephpy/vim-yaml', {'for': 'yaml'}
 Plug 'groenewege/vim-less', {'for': 'less'}
 
 Plug 'yuezk/vim-js', {'for': ['javascript', 'javascript.jsx']}
-Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
+"Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascript', 'javascript.jsx']}
 call plug#end()
 
@@ -67,6 +69,8 @@ let g:afterglow_inherit_background=1
 " devicons
 set guifont=Sauce\ Code\ Pro\ Light\ Nerd\ Font\ Complete\ Windows\ Compatible:h11
 let g:webdevicons_enable_vimfiler = 1
+
+filetype plugin on
 
 source ~/.config/nvim/plugins/coc.rc.vim
 source ~/.config/nvim/plugins/defx.rc.vim

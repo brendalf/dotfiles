@@ -42,4 +42,4 @@ nmap <C-q> :q<Return>
 vnoremap < <gv
 vnoremap > >gv
 " Ctrl c instead of escape
-vnoremap <C-c> <Esc>
+" vnoremap <C-c> <Esc>

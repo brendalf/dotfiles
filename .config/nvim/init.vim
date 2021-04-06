@@ -9,3 +9,5 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
 endif
+
+let g:python3_host_prog = expand("/usr/bin/python3")

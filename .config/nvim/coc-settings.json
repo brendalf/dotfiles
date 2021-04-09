@@ -1,8 +1,8 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
     "json",
+    "python3",
     "css",
-    "markdown",
     "javascript",
     "javascriptreact",
     "typescript",
@@ -11,17 +11,17 @@
     "graphql"
   ],
   "eslint.autoFixOnSave": true,
-  "eslint.autoFix": true,
   "tsserver.enableJavascript": false,
+  "codeLens.enable": true,
   "languageserver": {
-    "flow": {
-      "command": "flow",
-      "args": ["lsp"],
-      "filetypes": ["javascript", "javascriptreact"],
-      "initializationOptions": {},
-      "requireRootPattern": true,
-      "settings": {},
-      "rootPatterns": [".flowconfig"]
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "elixirLS": {
+      "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
     }
   },
   "diagnostic.errorSign": "✘",

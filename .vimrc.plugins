@@ -3,26 +3,40 @@
 "------------------------------------------------------------------------------
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
+" Git commands
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+" Code completion
 Plug 'neoclide/coc.nvim'
+" Defx folder plugins
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
+" Auto pairs
 Plug 'jiangmiao/auto-pairs'
+" Info bar
 Plug 'itchyny/lightline.vim'
+" Nice icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'danilo-augusto/vim-afterglow'
+" Best theme in the world
+Plug 'gruvbox-community/gruvbox'
+" Fuzzy finder with preview
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+" Auto comment lines or blocks of code
 Plug 'preservim/nerdcommenter'
+" Git changes integration
 Plug 'mhinz/vim-signify'
+" Navigation folder
 if has('nvim')
     Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
-    Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
 else
     Plug 'Shougo/defx.nvim'
-    Plug 'Shougo/denite.nvim'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
+    " Focus events
+    Plug 'tmux-plugins/vim-tmux-focus-events'
 endif
 
 " Initialize lazy plugin
@@ -58,20 +72,15 @@ let g:jsx_ext_required = 0
 " disable auto preview window
 set completeopt-=preview
 
-" localvimrc
-let g:localvimrc_ask = 0
-
-" onehalf
-" let g:airline_theme='afterglow'
-let g:afterglow_inherit_background=1
-
 " devicons
 set guifont=Sauce\ Code\ Pro\ Light\ Nerd\ Font\ Complete\ Windows\ Compatible:h11
 let g:webdevicons_enable_vimfiler = 1
+
+" fzf
+nmap <C-p> :Files<Return>
+nmap ;r :Rg<Return>
 
 filetype plugin on
 
 source ~/.config/nvim/plugins/coc.rc.vim
 source ~/.config/nvim/plugins/defx.rc.vim
-source ~/.config/nvim/plugins/denite.rc.vim
-

@@ -43,3 +43,5 @@ vnoremap < <gv
 vnoremap > >gv
 " Ctrl c instead of escape
 " vnoremap <C-c> <Esc>
+" Git fugitive
+nmap <leader>gs :G<Return>

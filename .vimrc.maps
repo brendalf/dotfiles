@@ -1,6 +1,12 @@
 "--------------------------------------------------------
 " Tabs
 "--------------------------------------------------------
+nnoremap <space> <Nop>
+let mapleader = " "
+
+"--------------------------------------------------------
+" Tabs
+"--------------------------------------------------------
 " Open current directory
 nmap te :tabedit<Return>
 " List tabs
@@ -14,7 +20,7 @@ nmap <Tab> :tabnext<Return>
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 " Move window
-nmap <Space> <C-w>w
+" nmap <Space> <C-w>w
 map s<left> <C-w>r
 map s<up> <C-w>k
 map s<down> <C-w>j

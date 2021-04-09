@@ -8,28 +8,41 @@ scriptencoding utf-8
 if !1 | finish | endif
 
 " basic configs
+set exrc
 set number
+set relativenumber
 set nocompatible
 syntax enable
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
+set hidden
+set autoread
 set autoindent
 set background=dark
 set nobackup
 set nowritebackup
-set hlsearch
+set nohlsearch
+set noerrorbells
+set noswapfile
+"set nowrap
 set showcmd
+set incsearch
 set cmdheight=1
+set colorcolumn=80
+"set signcolumn=yes
 set laststatus=2
 set scrolloff=10
 set clipboard=unnamedplus
 set expandtab
-"set updatetime=300
+set updatetime=50
 "set timeoutlen=100
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
-" saving as root
+" trigger checktime
+au FocusGained, BufEnter * :checktime " on buffer change or terminal focus
+
+"saving as root
 "cmap w! w !sudo tee %
 
 "title configs
@@ -138,6 +151,7 @@ source ~/.vimrc.lightline
 "-------------------------------------------------------------------------------
 " Color scheme
 "-------------------------------------------------------------------------------
-colorscheme afterglow
+colorscheme gruvbox
+highlight Normal guibg=none
 
 set exrc

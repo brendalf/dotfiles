@@ -8,6 +8,7 @@
     "typescript",
     "typescriptreact",
     "typescript.tsx",
+    "typescript.jsx",
     "graphql"
   ],
   "eslint.autoFixOnSave": true,

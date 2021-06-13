@@ -28,6 +28,8 @@ Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdcommenter'
 " Git changes integration
 Plug 'mhinz/vim-signify'
+" Highlight for TSX
+Plug 'ianks/vim-tsx'
 " Navigation folder
 if has('nvim')
     Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}

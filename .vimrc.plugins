@@ -28,8 +28,6 @@ Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdcommenter'
 " Git changes integration
 Plug 'mhinz/vim-signify'
-" Highlight for TSX
-Plug 'ianks/vim-tsx'
 " Navigation folder
 if has('nvim')
     Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
@@ -52,6 +50,7 @@ Plug 'groenewege/vim-less', {'for': 'less'}
 
 Plug 'yuezk/vim-js', {'for': ['javascript', 'javascript.jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascript', 'javascript.jsx']}
+Plug 'ianks/vim-tsx', {'for': ['javascript', 'javascript.jsx']}
 call plug#end()
 
 "------------------------------------------------------------------------------
@@ -83,6 +82,9 @@ nmap <C-p> :Files<Return>
 nmap ;r :Rg<Return>
 
 filetype plugin on
+
+" gruvbox contrast
+let g:gruvbox_contrast_dark = "hard"
 
 source ~/.config/nvim/plugins/coc.rc.vim
 source ~/.config/nvim/plugins/defx.rc.vim

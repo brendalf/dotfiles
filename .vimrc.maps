@@ -44,6 +44,8 @@ nmap <C-h> :%s/
 nmap <C-s> :w<Return>
 " Close
 nmap <C-q> :q<Return>
+" Reload file
+nmap <leader>r :e!<Return>
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv

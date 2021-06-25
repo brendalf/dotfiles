@@ -12,7 +12,6 @@ set exrc
 set number
 set relativenumber
 set nocompatible
-syntax enable
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set hidden
@@ -32,7 +31,7 @@ set colorcolumn=80
 "set signcolumn=yes
 set laststatus=2
 set scrolloff=10
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 set expandtab
 set updatetime=50
 "set timeoutlen=100
@@ -151,7 +150,8 @@ source ~/.vimrc.lightline
 "-------------------------------------------------------------------------------
 " Color scheme
 "-------------------------------------------------------------------------------
+syntax enable
 colorscheme gruvbox
-highlight Normal guibg=none
+"highlight Normal guibg=none
 
 set exrc

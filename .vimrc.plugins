@@ -19,7 +19,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jlanzarotta/bufexplorer'
 " Best theme in the world
-Plug 'gruvbox-community/gruvbox'
+Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
 " Fuzzy finder with preview
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

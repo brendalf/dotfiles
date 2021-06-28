@@ -53,3 +53,4 @@ vnoremap > >gv
 " vnoremap <C-c> <Esc>
 " Git fugitive
 nmap <leader>gs :G<Return>
+nmap <leader>gb :Git blame<Return>

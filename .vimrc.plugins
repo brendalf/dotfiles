@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Git commands
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+"Plug 'APZelos/blamer.nvim'
 " Code completion
 Plug 'neoclide/coc.nvim'
 " Defx folder plugins
@@ -29,6 +30,8 @@ Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdcommenter'
 " Git changes integration
 Plug 'mhinz/vim-signify'
+" Multiple cursor selection
+Plug 'terryma/vim-multiple-cursors'
 " Navigation folder
 if has('nvim')
     Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
@@ -48,7 +51,6 @@ Plug 'dag/vim-fish', {'for': 'fish'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-yaml', {'for': 'yaml'}
 Plug 'groenewege/vim-less', {'for': 'less'}
-
 Plug 'yuezk/vim-js', {'for': ['javascript', 'javascript.jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascript', 'javascript.jsx']}
 Plug 'ianks/vim-tsx', {'for': ['javascript', 'javascript.jsx']}
@@ -61,11 +63,17 @@ call plug#end()
 let g:vim_json_syntax_conceal = 0
 
 " status line
-if !exists('*fugitive#statusline')
-    set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
-    set statusline+=%=
-    set statusline+=%{fugitive#statusline()}
-endif
+"if !exists('*fugitive#statusline')
+set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
+set statusline+=%=
+set statusline+=%{fugitive#statusline()}
+"set statusline+=%{FugitiveStatusline()}
+"endif
+
+" git blame
+"let g:blamer_enabled = 0
+"let g:blamer_delay = 500
+"let g:blamer_show_in_insert_modes = 0
 
 " jsx 
 let g:jsx_ext_required = 0

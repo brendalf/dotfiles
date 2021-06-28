@@ -153,5 +153,3 @@ source ~/.vimrc.lightline
 syntax enable
 colorscheme gruvbox
 "highlight Normal guibg=none
-
-set exrc

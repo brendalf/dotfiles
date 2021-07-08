@@ -18,9 +18,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 " Nice icons
 Plug 'ryanoasis/vim-devicons'
+" Buffer explorer
 Plug 'jlanzarotta/bufexplorer'
 " Best theme in the world
-Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 " Fuzzy finder with preview
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -32,6 +32,10 @@ Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-signify'
 " Multiple cursor selection
 Plug 'terryma/vim-multiple-cursors'
+" Debbuger
+Plug 'puremourning/vimspector'
+" Maximizer
+Plug 'szw/vim-maximizer'
 " Navigation folder
 if has('nvim')
     Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}

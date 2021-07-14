@@ -51,6 +51,37 @@ vnoremap < <gv
 vnoremap > >gv
 " Ctrl c instead of escape
 " vnoremap <C-c> <Esc>
-" Git fugitive
+
+"---------------------------------------------------------
+" Git Fugitive
+"---------------------------------------------------------
+" Git status
 nmap <leader>gs :G<Return>
+" Git blame
 nmap <leader>gb :Git blame<Return>
+
+"---------------------------------------------------------
+" Maximizer
+"---------------------------------------------------------
+" Toggle
+nnoremap <leader>m :MaximizerToggle!<Return>
+
+"---------------------------------------------------------
+" Vimspector
+"---------------------------------------------------------
+" Open Debugger
+nnoremap <leader>dd :call vimspector#Launch()<Return>
+" Close Debugger
+nnoremap <leader>de :call vimspector#Reset()<Return>
+" Moving to Windows
+"nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<Return>
+" Debugging 
+nmap <leader>dl <Plug>VimspectorStepInto 
+nmap <leader>dj <Plug>VimspectorStepOver 
+nmap <leader>dk <Plug>VimspectorStepOut 
+nmap <leader>dr <Plug>VimspectorRestart 
+nnoremap <leader>d<space> :call vimspector#Continue()<Return>
+" Breakpoints 
+nmap <leader>drc <Plug>VimspectorRunToCursor 
+nmap <leader>dbp <Plug>VimspectorToggleBreakpoint 
+nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint 

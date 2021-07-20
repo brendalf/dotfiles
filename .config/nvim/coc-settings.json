@@ -11,6 +11,7 @@
     "typescript.jsx",
     "graphql"
   ],
+  "pyright.enable": true,
   "eslint.autoFixOnSave": true,
   "tsserver.enableJavascript": false,
   "codeLens.enable": true,

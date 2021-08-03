@@ -20,10 +20,6 @@
       "command": "docker-langserver",
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
-    },
-    "elixirLS": {
-      "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
-      "filetypes": ["elixir", "eelixir"]
     }
   },
   "diagnostic.errorSign": "✘",

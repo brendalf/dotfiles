@@ -59,6 +59,18 @@ vnoremap > >gv
 nmap <leader>gs :G<Return>
 " Git blame
 nmap <leader>gb :Git blame<Return>
+" Git add interactively
+nmap <leader>gap :Git add -p<Return>
+" Git commit
+nmap <leader>gc :Git commit<Return>
+" Git push
+nmap <leader>gp :Git push<Return>
+" Git pull
+nmap <leader>gd :Git pull<Return>
+" Git pull from master
+nmap <leader>gdm :Git pull origin master<Return>
+" Git log
+nmap <leader>gl :Git log --oneline<Return>
 
 "---------------------------------------------------------
 " Maximizer

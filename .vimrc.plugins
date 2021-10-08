@@ -91,6 +91,14 @@ set guifont=Sauce\ Code\ Pro\ Light\ Nerd\ Font\ Complete\ Windows\ Compatible:h
 let g:webdevicons_enable_vimfiler = 1
 
 " fzf
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --line-number --no-heading --color=always --threads 0 --trim --ignore-file .gitignore --ignore-file .fignore --hidden --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
+
 nmap <C-p> :Files<Return>
 nmap ;r :Rg<Return>
 

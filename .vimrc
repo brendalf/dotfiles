@@ -99,6 +99,7 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType ex setlocal shiftwidth=2 tabstop=2
+autocmd FileType exs setlocal shiftwidth=2 tabstop=2
 
 " javaScript
 au BufNewFile,BufRead *.es6 setf javascript

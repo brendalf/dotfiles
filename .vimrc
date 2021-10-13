@@ -53,9 +53,6 @@ if has('nvim')
     set inccommand=split
 endif
 
-" auto source vim files
-" au! BufWritePost $MYVIMRC source %
-
 " suppress appending <PasteStart> and <PasteEnd> when pasting
 set t_BE=
 set nosc noru nosm
@@ -113,7 +110,6 @@ au BufNewFile,BufRead *.flow set filetype=javascript
 "-------------------------------------------------------------------------------
 " Cursor line
 "-------------------------------------------------------------------------------
-
 set cursorline
 
 " set cursor line color on visual mode
@@ -135,7 +131,6 @@ endif
 "-------------------------------------------------------------------------------
 " Imports
 "-------------------------------------------------------------------------------
-
 if has("unix")
     let s:uname = system("uname -s")
     " Do Mac stuff
@@ -147,6 +142,17 @@ endif
 source ~/.vimrc.maps
 source ~/.vimrc.plugins
 source ~/.vimrc.lightline
+
+"-------------------------------------------------------------------------------
+" Start
+"-------------------------------------------------------------------------------
+function! s:start_with_filemanager()
+    if !argc()
+        Defx -new `expand('%:p:h')` -search=`expand('%:p')`
+    endif
+endfunction
+
+autocmd VimEnter * call s:start_with_filemanager()
 
 "-------------------------------------------------------------------------------
 " Color scheme

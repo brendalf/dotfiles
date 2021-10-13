@@ -69,18 +69,9 @@ call plug#end()
 " vim-json
 let g:vim_json_syntax_conceal = 0
 
-" status line
-"if !exists('*fugitive#statusline')
 set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
 set statusline+=%=
 set statusline+=%{fugitive#statusline()}
-"set statusline+=%{FugitiveStatusline()}
-"endif
-
-" git blame
-"let g:blamer_enabled = 0
-"let g:blamer_delay = 500
-"let g:blamer_show_in_insert_modes = 0
 
 " jsx 
 let g:jsx_ext_required = 0

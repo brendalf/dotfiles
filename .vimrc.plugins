@@ -6,7 +6,8 @@ call plug#begin('~/.vim/plugged')
 " Git commands
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-"Plug 'APZelos/blamer.nvim'
+" Git changes integration
+Plug 'mhinz/vim-signify'
 " Code completion
 Plug 'neoclide/coc.nvim'
 " Defx folder plugins
@@ -28,8 +29,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 " Auto comment lines or blocks of code
 Plug 'preservim/nerdcommenter'
-" Git changes integration
-Plug 'mhinz/vim-signify'
 " Multiple cursor selection
 Plug 'terryma/vim-multiple-cursors'
 " Maximizer
@@ -61,6 +60,7 @@ Plug 'puremourning/vimspector', {'for': ['python']}
 Plug 'godlygeek/tabular', {'for': ['markdown']}
 Plug 'plasticboy/vim-markdown', {'for': ['markdown']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': ['markdown']  }
+Plug 'sotte/presenting.vim', {'for': ['markdown']}
 call plug#end()
 
 "------------------------------------------------------------------------------

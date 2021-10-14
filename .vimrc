@@ -20,7 +20,7 @@ set autoindent
 set background=dark
 set nobackup
 set nowritebackup
-set nohlsearch
+"set nohlsearch
 set noerrorbells
 set noswapfile
 "set nowrap

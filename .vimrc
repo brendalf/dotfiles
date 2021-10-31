@@ -160,3 +160,5 @@ autocmd VimEnter * call s:start_with_filemanager()
 syntax enable
 colorscheme gruvbox
 "highlight Normal guibg=none
+
+unmap <C-i>

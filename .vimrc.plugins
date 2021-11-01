@@ -102,5 +102,5 @@ filetype plugin on
 " gruvbox contrast
 let g:gruvbox_contrast_dark = "hard"
 
-source ~/.config/nvim/plugins/coc.rc.vim
-source ~/.config/nvim/plugins/defx.rc.vim
+source ~/.vim/plugins/coc.rc.vim
+source ~/.vim/plugins/defx.rc.vim

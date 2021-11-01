@@ -9,8 +9,8 @@ alias t tmux
 alias tm tmuxinator
 
 if type -q exa
-  alias ls "exa --icons"
-  alias la "exa -a --icons"
+  alias ls "exa"
+  alias la "exa -a"
   alias ll "exa -l -h --icons"
   alias lla "ll -a"
 end

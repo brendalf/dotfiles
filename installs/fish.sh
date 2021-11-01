@@ -26,6 +26,11 @@ chmod +x install.sh
 fisher install gazorby/fish-abbreviation-tips
 fisher install jorgebucaran/nvm.fish
 fisher install IlanCosman/tide
+fisher install jethrokuan/z
 
 # functions
 mv .config/fish/functions/* ~/.config/fish/functions
+
+# configs
+mv .config/fish/personal_config.fish ~/.config/fish/
+echo "source ~/.config/fish/personal_config.fish" >> ~/.config/fish/config.fish

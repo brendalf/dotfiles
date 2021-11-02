@@ -35,7 +35,7 @@ set updatetime=50
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
-filetype plugin on
+filetype plugin indent on
 
 " trigger checktime
 au FocusGained, BufEnter * :checktime " on buffer change or terminal focus
@@ -61,7 +61,6 @@ set ignorecase
 set smarttab
 
 " indent
-filetype indent on
 set shiftwidth=4
 set tabstop=4
 set backspace=start,eol,indent

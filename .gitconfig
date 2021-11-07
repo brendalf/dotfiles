@@ -1,7 +1,6 @@
 [diff]
     tool = nvimdiff
 [core]
-	excludesfile = ~/.gitignore
 	editor = nvim
 [push]
     default = simple

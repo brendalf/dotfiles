@@ -9,7 +9,7 @@ require 'nvim-treesitter.configs'.setup {
 		disable = {}
 	},
 	ident = {
-		enable = false,
+		enable = true,
 		disable = {}
 	},
 	ensure_installed = {

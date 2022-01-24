@@ -36,15 +36,15 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
--- local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
--- for _, lsp in ipairs(servers) do
---  nvim_lsp[lsp].setup {
---    on_attach = on_attach,
---    flags = {
---      debounce_text_changes = 150,
---    }
---  }
--- end
+local servers = { 'pyright' }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    -- flags = {
+    --   debounce_text_changes = 150,
+    -- }
+  }
+end
 
 local path_to_elixirls = vim.fn.expand("~/.cache/nvim/lspconfig/elixirls/elixir-ls/release/language_server.sh")
 

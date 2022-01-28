@@ -17,8 +17,6 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
-"Plug 'prabirshrestha/vim-lsp'
-"Plug 'mattn/vim-lsp-settings'
 
 " auto complete
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -67,6 +65,7 @@ Plug 'tpope/vim-surround'
 " Lazy Plugins
 "------------------------------------------------------------------------------
 Plug 'puremourning/vimspector', {'for': ['python']}
+Plug 'gabrielelana/vim-markdown', {'for': ['markdown']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': ['markdown']  }
 Plug 'sotte/presenting.vim', {'for': ['markdown']}
 Plug 'elixir-editors/vim-elixir', {'for': ['elixir']}

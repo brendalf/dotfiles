@@ -69,5 +69,6 @@ Plug 'gabrielelana/vim-markdown', {'for': ['markdown']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': ['markdown']  }
 Plug 'sotte/presenting.vim', {'for': ['markdown']}
 Plug 'elixir-editors/vim-elixir', {'for': ['elixir']}
+Plug 'ray-x/go.nvim', {'for': ['go']}
 
 call plug#end()

@@ -8,7 +8,6 @@ local modules = {
     "git-blame-line",
     "git-fugitive",
     "gitsigns",
-    "indent-blankline",
     "lsp",
     "lsp-colors",
     "lualine",

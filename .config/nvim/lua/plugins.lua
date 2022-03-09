@@ -7,7 +7,6 @@ return {
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
     },
-    { "lukas-reineke/indent-blankline.nvim" },
 
     -- elixir/mix
     { "brendalf/mix-fugitive" },

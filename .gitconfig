@@ -3,7 +3,7 @@
 [core]
 	editor = nvim
 [push]
-    default = simple
+	default = current
 [color]
     status = auto
     diff = auto

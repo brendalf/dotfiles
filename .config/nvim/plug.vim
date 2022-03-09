@@ -18,6 +18,9 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " lsp
 Plug 'neovim/nvim-lspconfig'
 
+" terminal
+Plug 'akinsho/toggleterm.nvim'
+
 " auto complete
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'

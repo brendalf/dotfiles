@@ -22,7 +22,10 @@ require 'nvim-treesitter.configs'.setup {
 		"scss",
 		"python",
 		"javascript",
-		"elixir"
+		"elixir",
+        "go",
+        "typescript",
+        "graphql"
 	}
 }
 EOF

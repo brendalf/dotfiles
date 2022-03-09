@@ -33,8 +33,7 @@ function M.init()
                     fallback()
                 end
             end, { "i", "s" }),
-            -- NOTE: [aa is used as ctrl-space
-            ["[aa"] = cmp.mapping.complete(),
+            ["<C-space>"] = cmp.mapping.complete(),
             ["<CR>"] = cmp.mapping.confirm({
                 select = true,
             }),

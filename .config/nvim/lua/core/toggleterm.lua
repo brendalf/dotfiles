@@ -4,7 +4,7 @@ local toggleterm = require("toggleterm")
 local M = {}
 
 function M.init()
-    local keymap_toggle = "<C-i>"
+    local keymap_toggle = "<S-Tab>"
 
     toggleterm.setup({
         -- size can be a number or function which is passed the current terminal

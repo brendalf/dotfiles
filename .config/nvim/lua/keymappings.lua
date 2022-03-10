@@ -60,7 +60,7 @@ local default_mappings = {
         ["<C-h>"] = "<ESC>:%s/",
 
         -- Reload file
-        ["<C-r>"] = ":e!<CR>",
+        ["<Leader>r"] = ":e!<CR>",
 
         -- Split window
         ["<Leader>sv"] = ":vsplit<CR>",

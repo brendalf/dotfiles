@@ -21,8 +21,8 @@ local default_mappings = {
         ["jk"] = "<ESC>",
 
         -- move line up/down
-        ["<C-j>"] = "<ESC>:m .+1<CR>==gi",
-        ["<C-k>"] = "<ESC>:m .-2<CR>==gi",
+        ["<C-j>"] = "<ESC>:m .+2<CR>==gi",
+        ["<C-k>"] = "<ESC>:m .-1<CR>==gi",
     },
     normal_mode = {
         ["<Space>"] = "<NOP>",
@@ -32,12 +32,10 @@ local default_mappings = {
         -- ["<S-h>"] = ":tabprev<CR>",
         -- ["<S-l>"] = ":tabnext<CR>",
 
-        -- Save file
-        ["<Leader>ss"] = ":w<CR>",
+        -- Save / Close file
+        ["<C-s>"] = ":w<CR>",
+        ["<C-q>"] = ":q<CR>",
         ["<Leader>sq"] = ":wq<CR>",
-
-        -- Close file
-        ["<Leader>q"] = ":q<CR>",
 
         -- Navigate in windows
         ["sh"] = "<C-w>h",
@@ -81,8 +79,8 @@ local default_mappings = {
         [">"] = ">gv",
 
         -- Move up/down selected text
-        ["<C-j>"] = ":m '>+1<CR>gv=gv",
-        ["<C-k>"] = ":m '<-2<CR>gv=gv",
+        ["<C-j>"] = ":m '>+2<CR>gv=gv",
+        ["<C-k>"] = ":m '<-1<CR>gv=gv",
     },
     visual_block_mode = {
     },

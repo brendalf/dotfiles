@@ -10,7 +10,7 @@ function M.init()
 
     keymappings.load({
         normal_mode = {
-            ["<Leader>gtd"] = ":Gitsigns toggle_deleted<CR>",
+            ["<Leader>gd"] = ":Gitsigns toggle_deleted<CR>",
         },
     })
 end

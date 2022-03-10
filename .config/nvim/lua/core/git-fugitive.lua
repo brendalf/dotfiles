@@ -9,9 +9,10 @@ function M.init()
             ["<Leader>gb"] = ":G blame<CR>",
             ["<Leader>gap"] = ":G add -p<CR>",
             ["<Leader>gc"] = ":G commit<CR>",
-            ["<Leader>gp"] = ":G push<CR>",
-            ["<Leader>gd"] = ":G pull<CR>",
-            ["<Leader>gdm"] = ":G pull origin master<CR>",
+            ["<Leader>gdf"] = ":G diff<CR>",
+            ["<Leader>gps"] = ":G push<CR>",
+            ["<Leader>gpl"] = ":G pull<CR>",
+            ["<Leader>gpm"] = ":G pull origin master<CR>",
             ["<Leader>gl"] = ":G log --oneline<CR>",
         },
     })

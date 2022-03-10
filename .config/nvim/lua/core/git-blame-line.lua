@@ -8,7 +8,7 @@ function M.init()
 
     local mappings = {
         normal_mode = {
-            ["<Leader>gbl"] = "<cmd>:GitBlameLineToggle<CR>",
+            ["<Leader>gt"] = "<cmd>:GitBlameLineToggle<CR>",
         },
     }
 

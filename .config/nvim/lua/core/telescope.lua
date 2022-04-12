@@ -7,6 +7,18 @@ local M = {}
 function M.init()
     telescope.setup({
         defaults = {
+            file_ignore_patterns = {
+                "^.git/",
+                "^vendor/",
+                "^node_modules/",
+                "^target/",
+                "^coverage/",
+                "^code_coverage_html/",
+                "^test/reports/",
+                "^build/",
+                "^Build/",
+                ".DS_Store",
+            },
             mappings = {
                 i = {
                     ["<C-n>"] = actions.cycle_history_next,
@@ -19,6 +31,13 @@ function M.init()
                 n = {
                     ["<ESC>"] = actions.close,
                 },
+            },
+        },
+        pickers = {
+            find_files = {
+                hidden = true,
+                no_ignore = true,
+                find_command = { 'rg', '--files' }
             },
         },
     })

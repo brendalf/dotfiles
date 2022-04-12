@@ -1,10 +1,26 @@
-local bufferline = require("bufferline")
 local keymappings = require("keymappings")
+local bufferline = require("bufferline")
 
 local M = {}
 
 function M.init()
-    bufferline.setup()
+    bufferline.setup({
+        options = {
+            indicator_icon = "",
+            show_close_icon = false,
+            show_buffer_close_icons = false,
+            show_tab_indicators = false,
+            enforce_regular_tabs = false,
+            sort_by = function(buff_a, buff_b)
+                return buff_a.id < buff_b.id
+            end,
+        },
+        highlights = {
+            fill = {
+                guibg = "#1a1a24",
+            },
+        },
+    })
 
     keymappings.load({
         normal_mode = {

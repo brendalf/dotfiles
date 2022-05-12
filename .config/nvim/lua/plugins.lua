@@ -2,7 +2,6 @@ return {
     { "wbthomason/packer.nvim" },
 
     -- coloscheme/visual plugins
-    -- { "morhetz/gruvbox" },
     { "rebelot/kanagawa.nvim" },
     {
         "nvim-lualine/lualine.nvim",

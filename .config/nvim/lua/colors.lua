@@ -10,17 +10,7 @@ function M.init()
     end
 
     settings.cmd("colorscheme", scheme_name)
-    vim.g.gruvbox_contrast_dark = "hard"
+    settings.set("background", "dark")
 end
-
---function M.scheme_exists(scheme)
-    --local schemes = vim.fn.getcompletion("", "color")
-    --for _, t in ipairs(schemes) do
-        --if t == scheme then
-            --return true
-        --end
-    --end
-    --return false
---end
 
 return M

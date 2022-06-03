@@ -17,6 +17,7 @@ local modules = {
     "multi-cursor",
     "null-ls",
     "project",
+    "spectre",
     "telescope",
     "toggleterm",
     "treesitter",

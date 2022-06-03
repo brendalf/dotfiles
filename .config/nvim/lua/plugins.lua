@@ -57,6 +57,7 @@ return {
     -- finder
     { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } },
     { "ahmedkhalf/project.nvim" },
+    { "windwp/nvim-spectre", requires = { "nvim-lua/plenary.nvim" } },
 
     -- buffers/windows and tabs
     { "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" },
@@ -64,8 +65,8 @@ return {
 
     -- languages
     { "puremourning/vimspector", ft = "python" },
-    --{ "gabrielelana/vim-markdown", ft = "markdown" },
     { "iamcco/markdown-preview.nvim", ft = "markdown", run = { "cd app && yarn install" } },
-    --{ "sotte/presenting.vim", ft = "markdown" },
-    --{ "ray-x/go.nvim", ft = "go" }
+
+    -- initialization
+    { "lewis6991/impatient.nvim" },
 }

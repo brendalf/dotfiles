@@ -1,3 +1,4 @@
+local impatient = require("impatient")
 local plugins = require("plugins")
 local colors = require("colors")
 local plugin_loader = require("plugin-loader")

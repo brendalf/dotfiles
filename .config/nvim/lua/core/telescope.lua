@@ -11,6 +11,7 @@ function M.init()
                 "^.git/",
                 "^vendor/",
                 "^node_modules/",
+                "^logs/",
                 "^target/",
                 "^coverage/",
                 "^code_coverage_html/",

@@ -69,20 +69,46 @@ function M.disable_format_on_save(client)
 end
 
 function M.lsp_config()
+    vim.api.nvim_create_augroup("LspFormatting", { clear = true })
+    vim.api.nvim_create_augroup("LspDocumentHighlight", { clear = true })
+
     local mapping = {
         normal_mode = {
-            ["K"] = "<cmd>:lua vim.lsp.buf.hover()<CR>",
-            ["gd"] = "<cmd>:lua vim.lsp.buf.definition()<CR>",
-            ["gr"] = "<cmd>:lua vim.lsp.buf.references()<CR>",
-            ["gi"] = "<cmd>:lua vim.lsp.buf.implementation()<CR>",
-            ["<Leader>rn"] = "<cmd>:lua vim.lsp.buf.rename()<CR>",
-            ["g["] = "<cmd>:lua vim.diagnostic.goto_prev()<CR>",
-            ["g]"] = "<cmd>:lua vim.diagnostic.goto_next()<CR>",
-            ["<S-u>"] = "<cmd>:lua vim.diagnostic.open_float()<CR>",
-            ["<Leader>ff"] = "<cmd>:lua vim.lsp.buf.formatting()<CR>",
+            ["K"] = function()
+                vim.lsp.buf.hover()
+            end,
+            ["gd"] = function()
+                vim.lsp.buf.definition()
+            end,
+            ["ga"] = function()
+                vim.lsp.buf.code_action()
+            end,
+            ["gr"] = function()
+                vim.lsp.buf.references()
+            end,
+            ["gi"] = function()
+                vim.lsp.buf.implementation()
+            end,
+            ["<Leader>rn"] = function()
+                vim.lsp.buf.rename()
+            end,
+            ["[g"] = function()
+                vim.diagnostic.goto_prev()
+            end,
+            ["]g"] = function()
+                vim.diagnostic.goto_next()
+            end,
+            ["<S-u>"] = function()
+                vim.diagnostic.open_float()
+            end,
+            ["<Leader>ff"] = function()
+                vim.lsp.buf.formatting()
+            end,
         },
         visual_mode = {
-            ["<Leader>ff"] = "<cmd>:lua vim.lsp.buf.range_formatting()<CR>",
+            ["<Leader>ff"] = function()
+                vim.lsp.buf.range_formatting()
+            end,
         },
     }
 

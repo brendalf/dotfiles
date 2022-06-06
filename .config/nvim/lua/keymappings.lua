@@ -27,11 +27,6 @@ local default_mappings = {
     normal_mode = {
         ["<Space>"] = "<NOP>",
 
-        -- Tabs
-        -- ["te"] = ":tabedit<CR>",
-        -- ["<S-h>"] = ":tabprev<CR>",
-        -- ["<S-l>"] = ":tabnext<CR>",
-
         -- Save / Close file
         ["<C-s>"] = ":w<CR>",
         ["<C-q>"] = ":q<CR>",
@@ -89,11 +84,12 @@ local default_mappings = {
 }
 
 function M.set_keymaps(mode, key, val, bufnr)
-    if not bufnr then
-        vim.api.nvim_set_keymap(mode, key, val, generic_opts)
-    else
-        vim.api.nvim_buf_set_keymap(bufnr, mode, key, val, generic_opts)
-    end
+    local opts = {
+        noremap = true,
+        silent = true,
+        buffer = bufnr,
+    }
+    vim.keymap.set(mode, key, val, opts)
 end
 
 function M.load_mode(mode, mapping, bufnr)

@@ -68,6 +68,27 @@ function M.disable_format_on_save(client)
     client.resolved_capabilities.document_formatting = false
 end
 
+function M.enable_highlight(client, bufnr)
+    bufnr = bufnr or 0
+
+    if client.resolved_capabilities.document_highlight then
+        vim.api.nvim_create_autocmd("CursorHold", {
+            buffer = bufnr,
+            group = "LspDocumentHighlight",
+            callback = function()
+                vim.lsp.buf.document_highlight()
+            end,
+        })
+        vim.api.nvim_create_autocmd("CursorMoved", {
+            buffer = bufnr,
+            group = "LspDocumentHighlight",
+            callback = function()
+                vim.lsp.buf.clear_references()
+            end,
+        })
+    end
+end
+
 function M.lsp_config()
     vim.api.nvim_create_augroup("LspFormatting", { clear = true })
     vim.api.nvim_create_augroup("LspDocumentHighlight", { clear = true })
@@ -121,15 +142,7 @@ function M.lsp_config()
             M.enable_format_on_save(client, bufnr)
         end
 
-        if client.resolved_capabilities.document_highlight then
-            vim.cmd([[
-            augroup LspDocumentHighlight
-                autocmd! * <buffer>
-                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-            augroup END
-        ]])
-        end
+        M.enable_highlight(client, bufnr)
     end
 
     local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())

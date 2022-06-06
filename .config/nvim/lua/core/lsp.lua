@@ -49,7 +49,7 @@ local servers = {
     pyright = {}
 }
 
-local disabled_formatting_on_save = { "tsserver" }
+local disabled_formatting_on_save = { "tsserver", "html" }
 
 function M.enable_format_on_save(client, bufnr)
     bufnr = bufnr or 0

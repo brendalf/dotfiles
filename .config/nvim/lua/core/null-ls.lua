@@ -7,8 +7,8 @@ function M.init()
     local formatting = null_ls.builtins.formatting
 
     null_ls.setup({
-        on_attach = function(client)
-            lsp.enable_format_on_save(client)
+        on_attach = function(client, bufnr)
+            lsp.enable_format_on_save(client, bufnr)
         end,
         sources = {
             formatting.prettier,

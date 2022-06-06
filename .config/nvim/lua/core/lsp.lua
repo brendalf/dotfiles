@@ -48,15 +48,24 @@ local servers = {
     pyright = {}
 }
 
-function M.enable_format_on_save(client)
+local disabled_formatting_on_save = { "tsserver" }
+
+function M.enable_format_on_save(client, bufnr)
+    bufnr = bufnr or 0
+
     if client.resolved_capabilities.document_formatting then
-        vim.cmd([[
-                augroup LspFormatting
-                    autocmd! * <buffer>
-                    autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-                augroup END
-            ]])
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            group = "LspFormatting",
+            callback = function()
+                vim.lsp.buf.formatting_sync()
+            end,
+        })
     end
+end
+
+function M.disable_format_on_save(client)
+    client.resolved_capabilities.document_formatting = false
 end
 
 function M.lsp_config()
@@ -80,7 +89,11 @@ function M.lsp_config()
     local on_attach = function(client, bufnr)
         keymapping.load(mapping, bufnr)
 
-        M.enable_format_on_save(client)
+        if utils.contains(disabled_formatting_on_save, client.name) then
+            M.disable_format_on_save(client)
+        else
+            M.enable_format_on_save(client, bufnr)
+        end
 
         if client.resolved_capabilities.document_highlight then
             vim.cmd([[

@@ -64,3 +64,5 @@
 	name = Breno Silva
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main

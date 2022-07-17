@@ -3,6 +3,8 @@ sudo apt update
 
 echo "Installing Homebrew"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/${USER}/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 echo "Installing Dependencies"
 sudo apt install build-essential
@@ -25,6 +27,8 @@ brew install luajit
 brew install ghq
 brew install exa
 brew install gnu-sed
+brew install nodejs
+brew install rust
 
 echo "Github Auth"
 gh auth login
@@ -36,7 +40,7 @@ mv dotfiles/.config/* .config/
 mv dotfiles/.git* .
 mv dotfiles/.vim* .
 mv dotfiles/.tmux* .
-rm -f dotfiles
+rm -r dotfiles
 
 echo "Instaling Packer"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -47,8 +51,8 @@ chsh -s $(which fish)
 
 echo "Install Fisher"
 curl -sL https://git.io/fisher > fisher.txt
-source fisher.txt
-fisher install jorgebucaran/fisher
+fish -c "source fisher.txt"
+fish -c "fisher install jorgebucaran/fisher"
 rm fisher.txt
 
 echo "Install Nerd Fonts"
@@ -60,7 +64,7 @@ chmod +x install.sh
 ./install.sh FiraMono
 ./install.sh SourceCodePro
 cd ..
-rm -f nerd-fonts
+rm -r nerd-fonts
 
 echo "Install Fisher Plugins"
 fish -c "fisher install gazorby/fish-abbreviation-tips"

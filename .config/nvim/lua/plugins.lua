@@ -9,7 +9,7 @@ return {
     },
 
     -- elixir/mix
-    { "brendalf/mix-fugitive" },
+    { "brendalf/mix.nvim" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
 
     -- completion

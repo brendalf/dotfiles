@@ -14,7 +14,7 @@ local modules = {
     "lsp-colors",
     "lualine",
     "maximizer",
-    "mix-fugitive",
+    "mix",
     "multi-cursor",
     "null-ls",
     "project",

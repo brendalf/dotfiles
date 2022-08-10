@@ -36,13 +36,20 @@ return {
     { "nvim-treesitter/nvim-treesitter", run = { ":TSUpdate" } },
     { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } },
     { "tpope/vim-commentary" },
-    -- { "preservim/nerdcommenter" },
 
     -- git
     { "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } },
     { "tpope/vim-fugitive" },
-    -- { "tpope/vim-rhubarb" },
     { "kessejones/git-blame-line.nvim" },
+
+    -- github
+    { "pwntester/octo.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+            "kyazdani42/nvim-web-devicons",
+        },
+    },
 
     -- utils
     { "szw/vim-maximizer" },
@@ -50,7 +57,6 @@ return {
 
     -- cursors
     { "mg979/vim-visual-multi" },
-    -- { "terryma/vim-multiple-cursors" },
 
     -- terminal
     { "akinsho/toggleterm.nvim" },

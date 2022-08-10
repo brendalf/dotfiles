@@ -8,6 +8,7 @@ local modules = {
     "git-blame-line",
     "git-fugitive",
     "gitsigns",
+    "octo",
     "kanagawa",
     "lsp-installer",
     "lsp",

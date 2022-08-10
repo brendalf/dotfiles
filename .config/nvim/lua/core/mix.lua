@@ -1,7 +1,11 @@
+local mix = require("mix")
+
 local M = {}
 
 function M.init()
-    require("mix").setup()
+    mix.setup({
+        window = "floating"
+    })
 end
 
 return M

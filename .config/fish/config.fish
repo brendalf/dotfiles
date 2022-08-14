@@ -30,10 +30,9 @@ if type -q exa
   alias lla "ll -a"
 end
 
-# personal config
-source ~/.config/fish/personal_config.fish
-
 # Bun
 set -Ux BUN_INSTALL "/home/brendalf/.bun"
 set -px --path PATH "/home/brendalf/.bun/bin"
 
+# personal config
+source ~/.config/fish/personal_config.fish

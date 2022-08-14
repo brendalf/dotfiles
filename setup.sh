@@ -93,5 +93,7 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.fish
 mv tmuxinator.fish ~/.config/fish/completions/
 
+echo "Misc"
+npm install -g taskbook
 
 

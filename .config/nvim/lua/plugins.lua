@@ -59,15 +59,15 @@ return {
     { "mg979/vim-visual-multi" },
 
     -- terminal
-    { "akinsho/toggleterm.nvim" },
+    { "akinsho/toggleterm.nvim", branch = "main" },
 
     -- finder
     { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } },
     { "ahmedkhalf/project.nvim" },
-    { "windwp/nvim-spectre", requires = { "nvim-lua/plenary.nvim" } },
+    { "windwp/nvim-spectre", branch = "master", requires = { "nvim-lua/plenary.nvim" } },
 
     -- buffers/windows and tabs
-    { "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" },
+    { "akinsho/bufferline.nvim", branch = "main", requires = "kyazdani42/nvim-web-devicons" },
     { "moll/vim-bbye" },
 
     -- languages

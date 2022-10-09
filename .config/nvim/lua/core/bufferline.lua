@@ -17,7 +17,7 @@ function M.init()
         },
         highlights = {
             fill = {
-                guibg = "#1a1a24",
+                bg = "#1a1a24",
             },
         },
     })

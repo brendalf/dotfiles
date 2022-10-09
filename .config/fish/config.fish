@@ -36,3 +36,5 @@ set -px --path PATH "/home/brendalf/.bun/bin"
 
 # personal config
 source ~/.config/fish/personal_config.fish
+
+fish_vi_key_bindings

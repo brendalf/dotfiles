@@ -1,10 +1,10 @@
-local impatient = require("impatient")
+local impatient = pcall(require, "impatient")
 local plugins = require("plugins")
-local colors = require("colors")
 local plugin_loader = require("plugin-loader")
 local core = require("core")
 local keymappings = require("keymappings")
 local config = require("config")
+local colors = require("colors")
 
 function init()
     config.init()

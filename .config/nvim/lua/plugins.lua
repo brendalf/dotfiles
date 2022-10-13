@@ -1,15 +1,18 @@
 return {
     { "wbthomason/packer.nvim" },
+    { "nvim-lua/plenary.nvim" },
 
     -- coloscheme/visual plugins
+    { "kyazdani42/nvim-web-devicons" },
     { "rebelot/kanagawa.nvim" },
-    {
-        "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    },
+    { "nvim-lualine/lualine.nvim" },
+
+    -- finder
+    { "nvim-telescope/telescope.nvim", tag = "0.1.0" },
 
     -- elixir/mix
     { "brendalf/mix.nvim" },
+    -- { "/Users/breno.batista/src/nvim/mix.nvim/" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
 
     -- completion
@@ -32,24 +35,18 @@ return {
     { "Shougo/defx.nvim", run = { ":UpdateRemotePlugins" } },
 
     -- formatting/syntax
-    { "jiangmiao/auto-pairs" },
+    { "windwp/nvim-autopairs" },
     { "nvim-treesitter/nvim-treesitter", run = { ":TSUpdate" } },
-    { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } },
+    { "jose-elias-alvarez/null-ls.nvim" },
     { "tpope/vim-commentary" },
 
     -- git
-    { "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } },
+    { "lewis6991/gitsigns.nvim" },
     { "tpope/vim-fugitive" },
     { "kessejones/git-blame-line.nvim" },
 
     -- github
-    { "pwntester/octo.nvim",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-            "kyazdani42/nvim-web-devicons",
-        },
-    },
+    { "pwntester/octo.nvim" },
 
     -- utils
     { "szw/vim-maximizer" },
@@ -61,13 +58,12 @@ return {
     -- terminal
     { "akinsho/toggleterm.nvim", branch = "main" },
 
-    -- finder
-    { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } },
+
     { "ahmedkhalf/project.nvim" },
-    { "windwp/nvim-spectre", branch = "master", requires = { "nvim-lua/plenary.nvim" } },
+    { "windwp/nvim-spectre", branch = "master" },
 
     -- buffers/windows and tabs
-    { "akinsho/bufferline.nvim", branch = "main", requires = "kyazdani42/nvim-web-devicons" },
+    { "akinsho/bufferline.nvim", branch = "main" },
     { "moll/vim-bbye" },
 
     -- languages

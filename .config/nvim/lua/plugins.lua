@@ -12,8 +12,8 @@ return {
     { "nvim-telescope/telescope.nvim" },
 
     -- elixir/mix
-    { "brendalf/mix.nvim" },
-    -- { "/Users/breno.batista/src/nvim/mix.nvim/" },
+    -- { "brendalf/mix.nvim" },
+    { "/home/brendalf/src/mix.nvim" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
 
     -- completion
@@ -47,7 +47,8 @@ return {
     { "kessejones/git-blame-line.nvim" },
 
     -- github
-    { "pwntester/octo.nvim" },
+    -- { "pwntester/octo.nvim",
+    { "/home/brendalf/src/octo.nvim.git/feature@add_glab_backend/" },
 
     -- utils
     { "szw/vim-maximizer" },

@@ -54,7 +54,7 @@ local disabled_formatting_on_save = { "tsserver", "html", "sumneko_lua" }
 function M.enable_format_on_save(client, bufnr)
     bufnr = bufnr or 0
 
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = bufnr,
             group = "LspFormatting",
@@ -146,7 +146,7 @@ function M.lsp_config()
         M.enable_highlight(client, bufnr)
     end
 
-    local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
     for server, config in pairs(servers) do
         config["on_attach"] = on_attach

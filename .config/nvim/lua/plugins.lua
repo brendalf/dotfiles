@@ -3,6 +3,7 @@ return {
 
     -- coloscheme/visual plugins
     { "rebelot/kanagawa.nvim" },
+    { "catppuccin/nvim" },
     {
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },

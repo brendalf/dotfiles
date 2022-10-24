@@ -17,6 +17,7 @@ local modules = {
     "lualine",
     "maximizer",
     "mix",
+    "autopairs",
     "multi-cursor",
     "null-ls",
     "project",

@@ -46,13 +46,13 @@ function M.load(list)
                 M.packer.sync()
             end
         end,
-        config = {
-            display = {
-                open_fn = function()
-                    return require("packer.util").float({ border = "single" })
-                end,
-            },
-        },
+        -- config = {
+        --     display = {
+        --         open_fn = function()
+        --             return require("packer.util").float({ border = "single" })
+        --         end,
+        --     },
+        -- },
     })
 end
 

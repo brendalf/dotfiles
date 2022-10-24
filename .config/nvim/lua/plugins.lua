@@ -1,18 +1,19 @@
 return {
     { "wbthomason/packer.nvim" },
     { "nvim-lua/plenary.nvim" },
+    { "kyazdani42/nvim-web-devicons" },
 
     -- coloscheme/visual plugins
-    { "kyazdani42/nvim-web-devicons" },
-    { "rebelot/kanagawa.nvim" },
+    -- { "rebelot/kanagawa.nvim" },
+    { "catppuccin/nvim" },
     { "nvim-lualine/lualine.nvim" },
 
     -- finder
-    { "nvim-telescope/telescope.nvim", tag = "0.1.0" },
+    { "nvim-telescope/telescope.nvim" },
 
     -- elixir/mix
-    { "brendalf/mix.nvim" },
-    -- { "/Users/breno.batista/src/nvim/mix.nvim/" },
+    -- { "brendalf/mix.nvim" },
+    { "/home/brendalf/src/mix.nvim" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
 
     -- completion
@@ -46,7 +47,8 @@ return {
     { "kessejones/git-blame-line.nvim" },
 
     -- github
-    { "pwntester/octo.nvim" },
+    -- { "pwntester/octo.nvim",
+    { "/home/brendalf/src/octo.nvim.git/feature@add_glab_backend/" },
 
     -- utils
     { "szw/vim-maximizer" },

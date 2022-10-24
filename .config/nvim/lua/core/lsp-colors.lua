@@ -1,4 +1,3 @@
-local keymappings = require("keymappings")
 local lsp_colors = require("lsp-colors")
 
 local M = {}

@@ -9,7 +9,7 @@ return {
     { "nvim-lualine/lualine.nvim" },
 
     -- finder
-    { "nvim-telescope/telescope.nvim", tag = "0.1.0" },
+    { "nvim-telescope/telescope.nvim" },
 
     -- elixir/mix
     { "brendalf/mix.nvim" },

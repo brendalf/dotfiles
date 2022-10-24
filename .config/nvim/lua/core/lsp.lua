@@ -66,13 +66,13 @@ function M.enable_format_on_save(client, bufnr)
 end
 
 function M.disable_format_on_save(client)
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
 end
 
 function M.enable_highlight(client, bufnr)
     bufnr = bufnr or 0
 
-    if client.resolved_capabilities.document_highlight then
+    if client.server_capabilities.document_highlight then
         vim.api.nvim_create_autocmd("CursorHold", {
             buffer = bufnr,
             group = "LspDocumentHighlight",

@@ -10,7 +10,7 @@ local modules = {
     "git-fugitive",
     "gitsigns",
     "octo",
-    "kanagawa",
+    -- "kanagawa",
     "lsp-installer",
     "lsp",
     "lsp-colors",

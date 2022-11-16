@@ -38,7 +38,6 @@ cd /home/$USER
 gh repo clone brendalf/dotfiles
 mv dotfiles/.config/* .config/
 mv dotfiles/.git* .
-mv dotfiles/.vim* .
 mv dotfiles/.tmux* .
 rm -r dotfiles
 

@@ -8,4 +8,3 @@ if [ -z "$args" ]; then
 fi
 
 git add $args
-Footer

@@ -1,9 +1,14 @@
-[diff]
-    tool = nvimdiff
 [core]
+    excludesfile = ~/.gitignore-global
 	editor = nvim
 [push]
 	default = current
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[diff]
+    tool = nvimdiff
 [color]
     status = auto
     diff = auto
@@ -42,11 +47,9 @@
     # add conflicted file on merge
     add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 [hub]
-  protocol = https
+    protocol = https
 [github]
     user = brendalf
-[diff]
-  tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -60,9 +63,5 @@
 	process = git-lfs filter-process
 [ghq]
     root = ~/.ghq
-[user]
-	name = Breno Silva
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
+[include]
+    path = ~/.gitconfig-user

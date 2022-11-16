@@ -23,6 +23,7 @@ function M.init()
             "python",
             "javascript",
             "elixir",
+            "php",
             "go",
             "typescript",
             "graphql"

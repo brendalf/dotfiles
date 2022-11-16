@@ -10,7 +10,6 @@ local modules = {
     "git-fugitive",
     "gitsigns",
     "octo",
-    "kanagawa",
     "lsp-installer",
     "lsp",
     "lsp-colors",
@@ -25,7 +24,8 @@ local modules = {
     "telescope",
     "toggleterm",
     "treesitter",
-    "vimspector"
+    "vimspector",
+    "tester"
 }
 
 function M.init()

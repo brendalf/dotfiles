@@ -4,7 +4,6 @@ return {
     { "kyazdani42/nvim-web-devicons" },
 
     -- coloscheme/visual plugins
-    -- { "rebelot/kanagawa.nvim" },
     { "catppuccin/nvim" },
     { "nvim-lualine/lualine.nvim" },
 
@@ -12,8 +11,7 @@ return {
     { "nvim-telescope/telescope.nvim" },
 
     -- elixir/mix
-    -- { "brendalf/mix.nvim" },
-    { "/home/brendalf/src/mix.nvim" },
+    { "brendalf/mix.nvim" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
 
     -- completion
@@ -47,8 +45,10 @@ return {
     { "kessejones/git-blame-line.nvim" },
 
     -- github
-    -- { "pwntester/octo.nvim",
-    { "/home/brendalf/src/octo.nvim.git/feature@add_glab_backend/" },
+    { "pwntester/octo.nvim" },
+
+    -- test
+    { "kessejones/tester.nvim" },
 
     -- utils
     { "szw/vim-maximizer" },

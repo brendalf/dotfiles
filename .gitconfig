@@ -1,9 +1,14 @@
-[diff]
-    tool = nvimdiff
 [core]
+    excludesfile = ~/.gitignore-global
 	editor = nvim
 [push]
 	default = current
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[diff]
+    tool = nvimdiff
 [color]
     status = auto
     diff = auto
@@ -12,41 +17,88 @@
     grep = auto
     ui = auto
 [alias]
-    a = "!git status --short | peco | awk '{print $2}' | xargs git add"
-    ap = add -p
-    d = diff
-    l = log
+    # general
+    s = status
+    f = fetch
+
+    # log
+    l = lg
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lo = log --oneline
-    wt = worktree
-    wta = worktree add
-    co = checkout
+
+    # add
+    a = "!~/.scripts/git/git-add.sh"
+    aa = "add --all"
+    ap = "add --patch"
+    ai = "add --interactive"
+
+    # checkout
+    co = "!~/.scripts/git/git-checkout.sh"
+    cb = checkout -b
+
+    # commit
     ci = commit
-    ca = commit -a
+    ca = commit --amend
+    cu = reset --soft HEAD^
+
+    # push
     ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+    fp = push --force-with-lease
+
+    # pull
     pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
-    st = status
-    br = branch
-    ba = branch -a
-    brn = branch -m
-    bm = branch --merged
-    bn = branch --no-merged
-    df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+
+    # branch
+    b = branch
+    bm = branch -m
+    bM = branch -M
+    bd = "!~/.scripts/git/git-branch-delete.sh -d"
+    bx = "!~/.scripts/git/git-branch-delete.sh -D"
+
+    # diff
+    d = diff
+    dh = diff HEAD^
+
+    # rebase
+    r = "!~/.scripts/git/git-rebase.sh"
+    rc = rebase --continue
+    rs = rebase --skip
+    ra = rebase --abort
+    ri = "!~/.scripts/git/git-rebase-interactive.sh"
+
+    # restore
+    rt = "!~/.scripts/git/git-restore-staged.sh"
+
+    # merge
+    m = "!~/.scripts/git/git-merge.sh"
+    ma = merge --abort
+    mc = merge --continue
+
+    # stash
+    ss = stash
+    sa = "!~/.scripts/git/git-stash.sh apply"
+    sd = "!~/.scripts/git/git-stash.sh drop"
+    sp = "!~/.scripts/git/git-stash.sh pop"
+    sl = "!git stash list | gum choose --limit 1 >/dev/null"
+
+    # worktree
+    wt = worktree
+    wa = worktree add
+    wr = worktree remove
+
+    # still testing
     hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
     llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
-    open = "!hub browse"
-    type = cat-file -t
-    dump = cat-file -p
+
+    # peco
+    df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
     find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
-    # edit conflicted file on merge
     edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
-    # add conflicted file on merge
     add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 [hub]
-  protocol = https
+    protocol = https
 [github]
     user = brendalf
-[diff]
-  tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -60,9 +112,5 @@
 	process = git-lfs filter-process
 [ghq]
     root = ~/.ghq
-[user]
-	name = Breno Silva
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
+[include]
+    path = ~/.gitconfig-user

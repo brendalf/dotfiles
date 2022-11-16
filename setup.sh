@@ -29,6 +29,7 @@ brew install exa
 brew install gnu-sed
 brew install nodejs
 brew install rust
+brew install gum
 
 echo "Github Auth"
 gh auth login
@@ -38,7 +39,6 @@ cd /home/$USER
 gh repo clone brendalf/dotfiles
 mv dotfiles/.config/* .config/
 mv dotfiles/.git* .
-mv dotfiles/.vim* .
 mv dotfiles/.tmux* .
 rm -r dotfiles
 
@@ -72,6 +72,9 @@ fish -c "fisher install jorgebucaran/nvm.fish"
 fish -c "fisher install IlanCosman/tide"
 fish -c "fisher install fisherman/pyenv"
 fish -c "fisher install jethrokuan/z"
+
+echo "Grant access to scripts"
+chmod +x .scripts/
 
 echo "Configure neovim"
 python3 -m pip install pynvim

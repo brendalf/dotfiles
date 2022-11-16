@@ -1,0 +1,8 @@
+.DS_Store
+*.o
+.tester.json
+
+node_modules/
+vendor/
+build/
+dist/

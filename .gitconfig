@@ -38,8 +38,12 @@
 
     # commit
     ci = commit
+    cin = commit -n
     ca = commit --amend
-    cu = reset --soft HEAD^
+    can = commit -n --amend
+
+    # reset
+    rs = reset --soft HEAD^
 
     # push
     ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
@@ -60,11 +64,11 @@
     dh = diff HEAD^
 
     # rebase
-    r = "!~/.scripts/git/git-rebase.sh"
-    rc = rebase --continue
-    rs = rebase --skip
-    ra = rebase --abort
-    ri = "!~/.scripts/git/git-rebase-interactive.sh"
+    rb = "!~/.scripts/git/git-rebase.sh"
+    rbc = rebase --continue
+    rbs = rebase --skip
+    rba = rebase --abort
+    rbi = "!~/.scripts/git/git-rebase-interactive.sh"
 
     # restore
     rt = "!~/.scripts/git/git-restore-staged.sh"

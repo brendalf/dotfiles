@@ -38,15 +38,16 @@
 
     # commit
     ci = commit
-    cin = commit -n
+    cin = ci -n
     ca = commit --amend
-    can = commit -n --amend
+    can = ca -n
 
     # reset
     rs = reset --soft HEAD^
 
     # push
     ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+    psn = ps --no-verify
     fp = push --force-with-lease
 
     # pull

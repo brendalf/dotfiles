@@ -96,7 +96,7 @@ theme.border_normal = theme.xcolorS0
 theme.border_focus = theme.xcolor2
 theme.border_marked = "#91231c"
 
-theme.menu_font = "FiraCode Nerd Font 12"
+theme.menu_font = "FiraCode Nerd Font 10"
 theme.menu_bg_focus = theme.xcolorbase
 theme.menu_fg_focus = theme.xcolor2
 theme.menu_border_width = dpi(2)
@@ -110,12 +110,12 @@ theme.menu_width = dpi(120)
 theme.tasklist_bg_focus = theme.xcolorbase
 theme.tasklist_fg_focus = theme.xcolor1
 theme.tasklist_disable_icon = true
-theme.tasklist_font = "FiraCode Nerd Font 11"
+theme.tasklist_font = "FiraCode Nerd Font 10"
 
 theme.taglist_spacing = dpi(2)
 theme.taglist_bg_focus = theme.xcolorbase
 theme.taglist_disable_icon = true
-theme.taglist_font = "FiraCode Nerd Font 11"
+theme.taglist_font = "FiraCode Nerd Font 10"
 theme.taglist_fg_focus = theme.xcolor2 --"#7e9dde"
 theme.taglist_fg_empty = theme.xcolorS2
 theme.taglist_fg_occupied = "#526c96"

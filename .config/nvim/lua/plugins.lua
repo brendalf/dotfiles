@@ -3,6 +3,9 @@ return {
     { "nvim-lua/plenary.nvim" },
     { "kyazdani42/nvim-web-devicons" },
 
+    -- Copilot
+    { "github/copilot.vim" },
+
     -- coloscheme/visual plugins
     { "catppuccin/nvim" },
     { "nvim-lualine/lualine.nvim" },
@@ -28,14 +31,19 @@ return {
     { "hrsh7th/cmp-cmdline" },
     { "folke/lsp-colors.nvim" },
 
-    -- inside folder
-    { "kristijanhusak/defx-git" },
-    { "kristijanhusak/defx-icons" },
-    { "Shougo/defx.nvim", run = { ":UpdateRemotePlugins" } },
+    -- folder navigation
+    { "SidOfc/carbon.nvim" },
 
     -- formatting/syntax
     { "windwp/nvim-autopairs" },
-    { "nvim-treesitter/nvim-treesitter", run = { ":TSUpdate" } },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        requires = {
+           "mitchellh/tree-sitter-hcl",
+        },
+        run = { ":TSUpdate" },
+        config = [[require('config.treesitter')]],
+    },
     { "jose-elias-alvarez/null-ls.nvim" },
     { "tpope/vim-commentary" },
 

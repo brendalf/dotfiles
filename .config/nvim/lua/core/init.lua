@@ -5,7 +5,6 @@ local modules = {
     "catppuccin",
     "cmp",
     "commentary",
-    "defx",
     "git-blame-line",
     "git-fugitive",
     "gitsigns",

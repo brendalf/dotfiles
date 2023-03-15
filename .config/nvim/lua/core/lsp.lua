@@ -6,28 +6,6 @@ local utils = require("utils")
 local M = {}
 
 local servers = {
-    sumneko_lua = {
-        settings = {
-            Lua = {
-                runtime = {
-                    version = "LuaJIT",
-                },
-                diagnostics = {
-                    globals = { "vim" },
-                },
-                workspace = {
-                    library = {
-                        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                        [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-                        [vim.fn.stdpath("config") .. "/lua"] = true,
-                    },
-                },
-                telemetry = {
-                    enable = false,
-                },
-            },
-        },
-    },
     tsserver = {},
     rust_analyzer = {},
     dockerls = {},
@@ -49,7 +27,7 @@ local servers = {
     pyright = {}
 }
 
-local disabled_formatting_on_save = { "tsserver", "json", "html", "sumneko_lua" }
+local disabled_formatting_on_save = { "tsserver", "json", "html", "lua_ls" }
 
 function M.enable_format_on_save(client, bufnr)
     bufnr = bufnr or 0

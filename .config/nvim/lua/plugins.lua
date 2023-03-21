@@ -53,7 +53,7 @@ return {
     { "kessejones/git-blame-line.nvim" },
 
     -- github
-    { "pwntester/octo.nvim" },
+    { "/Users/breno.batista/usr/src/octo.nvim" },
 
     -- test
     { "kessejones/tester.nvim" },

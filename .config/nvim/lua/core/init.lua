@@ -2,6 +2,7 @@ local M = {}
 
 local modules = {
     "bufferline",
+    "carbon",
     "catppuccin",
     "cmp",
     "commentary",

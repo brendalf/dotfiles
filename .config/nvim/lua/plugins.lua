@@ -7,7 +7,7 @@ return {
     { "github/copilot.vim" },
 
     -- coloscheme/visual plugins
-    { "catppuccin/nvim" },
+    { "catppuccin/nvim", as = "catppuccin" },
     { "nvim-lualine/lualine.nvim" },
 
     -- finder

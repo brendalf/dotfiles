@@ -14,6 +14,10 @@ alias g git
 alias v nvim
 alias t tmux
 alias mux tmuxinator
+alias k kubectl
+alias kcx kubectx
+alias kns kubens
+alias gauth "gcloud auth login"
 
 if type -q batcat
     alias b batcat

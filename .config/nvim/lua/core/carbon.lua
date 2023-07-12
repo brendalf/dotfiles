@@ -4,7 +4,7 @@ local carbon = require("carbon")
 local M = {}
 
 function M.init()
-    -- carbon.setup()
+    carbon.setup()
 
     local mappings = {
         normal_mode = {

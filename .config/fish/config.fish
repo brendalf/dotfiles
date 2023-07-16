@@ -10,6 +10,8 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
+alias config-nvim "nvim ~/.config/nvim/lua/plugins.lua"
+alias config-fish "nvim ~/.config/fish/config.fish"
 alias g git
 alias v nvim
 alias t tmux

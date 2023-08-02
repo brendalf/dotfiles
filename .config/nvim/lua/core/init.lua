@@ -1,6 +1,7 @@
 local M = {}
 
 local modules = {
+    "autopairs",
     "bufferline",
     "carbon",
     "catppuccin",
@@ -9,23 +10,23 @@ local modules = {
     "git-blame-line",
     "git-fugitive",
     "gitsigns",
-    "octo",
-    "lsp-installer",
     "lsp",
     "lsp-colors",
+    "lsp-installer",
     "lualine",
     "maximizer",
     "mix",
-    "autopairs",
     "multi-cursor",
     "null-ls",
+    "octo",
     "project",
     "spectre",
     "telescope",
+    "tester"
     "toggleterm",
     "treesitter",
     "vimspector",
-    "tester"
+    "worktree",
 }
 
 function M.init()

@@ -7,6 +7,7 @@ function M.init()
         sources = {
             { name = "nvim_lsp" },
             { name = "nvim_lua" },
+            { name = "copilot" },
             { name = "path" },
             { name = "luasnip" },
             { name = "buffer" },
@@ -19,24 +20,24 @@ function M.init()
         mapping = {
             ["<C-u>"] = cmp.mapping.scroll_docs(-4),
             ["<C-d>"] = cmp.mapping.scroll_docs(4),
-            ["<Tab>"] = cmp.mapping(function(fallback)
-                if cmp.visible() then
-                    cmp.select_next_item()
-                else
-                    fallback()
-                end
-            end, { "i", "s" }),
-            ["<S-Tab>"] = cmp.mapping(function(fallback)
-                if cmp.visible() then
-                    cmp.select_prev_item()
-                else
-                    fallback()
-                end
-            end, { "i", "s" }),
             ["<C-space>"] = cmp.mapping.complete(),
             ["<CR>"] = cmp.mapping.confirm({
                 select = true,
             }),
+            ["<C-k>"] = cmp.mapping(function()
+                if cmp.visible() then
+                    cmp.select_prev_item()
+                else
+                    cmp.complete()
+                end
+            end, { "i", "c", "s" }),
+            ["<C-j>"] = cmp.mapping(function()
+                if cmp.visible() then
+                    cmp.select_next_item()
+                else
+                    cmp.complete()
+                end
+            end, { "i", "c", "s" }),
             ["<c-y>"] = cmp.mapping.confirm({
                 behavior = cmp.ConfirmBehavior.Insert,
                 select = true,

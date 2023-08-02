@@ -51,6 +51,7 @@ return {
     { "lewis6991/gitsigns.nvim" },
     { "tpope/vim-fugitive" },
     { "kessejones/git-blame-line.nvim" },
+    { "ThePrimeagen/git-worktree.nvim" },
 
     -- github
     { "pwntester/octo.nvim" },
@@ -82,4 +83,6 @@ return {
 
     -- initialization
     { "lewis6991/impatient.nvim" },
+
+
 }

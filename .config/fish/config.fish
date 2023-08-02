@@ -13,13 +13,14 @@ set -g theme_hostname always
 alias config-nvim "nvim ~/.config/nvim/lua/plugins.lua"
 alias config-fish "nvim ~/.config/fish/config.fish"
 alias g git
+alias gc gcloud
 alias v nvim
 alias t tmux
 alias mux tmuxinator
 alias k kubectl
 alias kcx kubectx
 alias kns kubens
-alias gauth "gcloud auth login"
+alias gauth "gcloud auth login --update-adc"
 
 if type -q batcat
     alias b batcat

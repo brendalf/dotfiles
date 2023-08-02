@@ -13,15 +13,6 @@ local servers = {
     html = {},
     cssls = {},
     intelephense = {},
-    elixirls = {
-        cmd = { vim.fn.expand("~/.cache/nvim/lspconfig/elixirls/elixir-ls/release/language_server.sh") },
-        settings = {
-            elixirLS = {
-                dialyzerEnabled = false,
-                fetchDeps = false
-            }
-        }
-    },
     clangd = {},
     gopls = {},
     pyright = {}
@@ -113,6 +104,10 @@ function M.lsp_config()
     }
 
     local on_attach = function(client, bufnr)
+        if client.name == "copilot" then
+            return
+        end
+
         keymapping.load(mapping, bufnr)
 
         if utils.contains(disabled_formatting_on_save, client.name) then

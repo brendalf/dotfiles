@@ -22,7 +22,7 @@ local modules = {
     "project",
     "spectre",
     "telescope",
-    "tester"
+    "tester",
     "toggleterm",
     "treesitter",
     "vimspector",

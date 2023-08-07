@@ -31,13 +31,20 @@ function M.init()
                     cmp.complete()
                 end
             end, { "i", "c", "s" }),
-            ["<C-j>"] = cmp.mapping(function()
+            ["<C-j>"] = cmp.mapping(function(fallback)
+                if cmp.visible() then
+                    cmp.select_next_item()
+                else
+                    fallback()
+                end
+            end, { "i", "c", "s" }),
+            ["<C-l>"] = cmp.mapping(function()
                 if cmp.visible() then
                     cmp.select_next_item()
                 else
                     cmp.complete()
                 end
-            end, { "i", "c", "s" }),
+            end, { "i" }),
             ["<c-y>"] = cmp.mapping.confirm({
                 behavior = cmp.ConfirmBehavior.Insert,
                 select = true,

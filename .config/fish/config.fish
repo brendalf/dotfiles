@@ -4,7 +4,7 @@ set -gx EDITOR nvim
 
 # bindings
 bind -s -M insert \cf 'cd $(find ~/src ~/Documents ~/.config ~/usr -type d | fzf)'
-bind -M insert \cs 'bash ~/bin/tmux-sessionizer'
+bind -s -M insert \ct 'bash ~/bin/tmux-sessionizer'
 bind -s -M insert \cd 'bash ~/bin/tmux-killer'
 
 # theme

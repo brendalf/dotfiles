@@ -15,6 +15,13 @@ function M.init()
 
         }
     })
+
+    worktree.on_tree_change(function(op, metadata)
+      if op == worktree.Operations.Switch then
+        vim.cmd("TermExec cmd='cd " .. metadata.path .. "'")
+        print("Switched from " .. metadata.prev_path .. " to " .. metadata.path)
+      end
+    end)
 end
 
 return M

@@ -49,6 +49,7 @@ function M.init()
             ["<Leader>p"] = ":Telescope find_files<CR>",
             [";r"] = ":Telescope live_grep<CR>",
             [";b"] = ":Telescope buffers<CR>",
+            [";p"] = ":Telescope projects<CR>",
             [";l"] = ":Telescope lsp_references<CR>",
             [";s"] = ":Telescope git_stash<CR>",
             [";g"] = ":Telescope git_commits<CR>",

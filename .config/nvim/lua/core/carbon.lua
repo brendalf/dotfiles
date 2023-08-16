@@ -8,7 +8,7 @@ function M.init()
 
     local mappings = {
         normal_mode = {
-            ["sf"] = "<cmd>:Lcarbon<CR>"
+            ["sf"] = "<cmd>:Fcarbon<CR>"
         }
     }
 

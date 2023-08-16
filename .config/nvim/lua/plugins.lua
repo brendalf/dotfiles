@@ -69,7 +69,7 @@ return {
     -- terminal
     { "akinsho/toggleterm.nvim", branch = "main" },
 
-
+    -- general
     { "ahmedkhalf/project.nvim" },
     { "windwp/nvim-spectre", branch = "master" },
 
@@ -83,6 +83,4 @@ return {
 
     -- initialization
     { "lewis6991/impatient.nvim" },
-
-
 }

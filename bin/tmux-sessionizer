@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-usual_git=$(find ~/src ~/usr -mindepth 1 -maxdepth 3 -type d -name .git -exec dirname {} \;)
-worktree=$(find ~/src ~/usr -mindepth 1 -maxdepth 3 -type d -name worktrees -exec dirname {} \;)
-selected=$(echo -e "$usual_git\n$worktree" | fzf)
+git_repos=$(find ~/src ~/usr -mindepth 1 -maxdepth 4 -type d -name .git -exec dirname {} \;)
+git_bare_repos=$(find ~/src ~/usr -mindepth 1 -maxdepth 4 -type d -name worktrees -exec dirname {} \;)
+selected=$(echo -e "$git_repos\n$git_bare_repos" | fzf)
 
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename $selected | tr . _)
+selected_name=$(basename $selected | tr '.' '_' | tr -d '_git')
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then

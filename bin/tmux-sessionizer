@@ -8,7 +8,7 @@ if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename $selected | tr '.' '_' | tr -d '_git')
+selected_name=$(basename $selected | sed "s/.git//g")
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then

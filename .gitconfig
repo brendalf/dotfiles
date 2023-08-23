@@ -54,7 +54,7 @@
     pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
 
     # branch
-    b = branch
+    b = "!~/.scripts/git/git-branch.sh"
     bm = branch -m
     bM = branch -M
     bd = "!~/.scripts/git/git-branch-delete.sh -d"

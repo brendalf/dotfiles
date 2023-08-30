@@ -20,6 +20,9 @@ function M.init()
       if op == worktree.Operations.Switch then
         vim.cmd("TermExec cmd='cd " .. metadata.path .. "'")
         print("Switched from " .. metadata.prev_path .. " to " .. metadata.path)
+
+        vim.cmd("TermExec cmd='poetry env info && poetry install && pyright_init'")
+        vim.cmd("LspRestart")
       end
     end)
 end

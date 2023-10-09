@@ -15,7 +15,8 @@ local servers = {
     intelephense = {},
     clangd = {},
     gopls = {},
-    pyright = {}
+    pyright = {},
+    jdtls = {}
 }
 
 local disabled_formatting_on_save = { "tsserver", "json", "html", "lua_ls" }

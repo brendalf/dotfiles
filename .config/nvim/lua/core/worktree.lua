@@ -12,7 +12,6 @@ function M.init()
         normal_mode = {
             [";w"] = ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>",
             ["gwa"] = ":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>",
-
         }
     })
 

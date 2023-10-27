@@ -25,7 +25,7 @@ alias mux tmuxinator
 alias k kubectl
 alias kcx kubectx
 alias kns kubens
-alias gauth "gcloud auth login --update-adc"
+alias gauth "gcloud auth application-default login"
 
 if type -q batcat
     alias b batcat

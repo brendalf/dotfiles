@@ -1,6 +1,8 @@
 return {
     { "wbthomason/packer.nvim" },
     { "nvim-lua/plenary.nvim" },
+
+    -- icons
     { "kyazdani42/nvim-web-devicons" },
 
     -- Copilot
@@ -19,7 +21,11 @@ return {
 
     -- completion
     { "onsails/lspkind-nvim" },
-    { "L3MON4D3/LuaSnip" },
+    {
+        "L3MON4D3/LuaSnip",
+        tag = "v2.*",
+        run = "make install_jsregexp"
+    },
     { "saadparwaiz1/cmp_luasnip" },
     { "williamboman/nvim-lsp-installer" },
     { "neovim/nvim-lspconfig" },
@@ -29,7 +35,9 @@ return {
     { "hrsh7th/cmp-nvim-lua" },
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/cmp-cmdline" },
-    { "folke/lsp-colors.nvim" },
+
+    -- colors
+    { "norcalli/nvim-colorizer.lua" },
 
     -- folder navigation
     { "SidOfc/carbon.nvim" },
@@ -44,13 +52,11 @@ return {
         run = { ":TSUpdate" },
         config = [[require('config.treesitter')]],
     },
-    { "jose-elias-alvarez/null-ls.nvim" },
     { "tpope/vim-commentary" },
 
     -- git
     { "lewis6991/gitsigns.nvim" },
-    { "tpope/vim-fugitive" },
-    { "kessejones/git-blame-line.nvim" },
+    { "dinhhuy258/git.nvim" },
     { "ThePrimeagen/git-worktree.nvim" },
 
     -- github
@@ -66,9 +72,6 @@ return {
     -- cursors
     { "mg979/vim-visual-multi" },
 
-    -- terminal
-    { "akinsho/toggleterm.nvim", branch = "main" },
-
     -- general
     { "ahmedkhalf/project.nvim" },
     { "windwp/nvim-spectre", branch = "master" },
@@ -78,8 +81,8 @@ return {
     { "moll/vim-bbye" },
 
     -- languages
-    { "puremourning/vimspector", ft = "python" },
-    { "iamcco/markdown-preview.nvim", ft = "markdown", run = { "cd app && yarn install" } },
+    { "puremourning/vimspector" },
+    { "iamcco/markdown-preview.nvim", run = { "cd app && yarn install" } },
 
     -- initialization
     { "lewis6991/impatient.nvim" },

@@ -121,3 +121,5 @@
     root = ~/.ghq
 [include]
     path = ~/.gitconfig-user
+[branch]
+	autosetuprebase = always

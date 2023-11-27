@@ -1,0 +1,7 @@
+**
+!.gitignore
+!.gitignore-global
+!.config/fish/**/*
+!.config/nvim/**/*
+!.tmux*
+!.scripts/**/*

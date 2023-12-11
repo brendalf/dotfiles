@@ -1,22 +1,6 @@
-# general
 set fish_greeting ""
-set -gx EDITOR nvim
 
-# bindings
-bind -s -M insert \cf 'cd $(find ~/src ~/Documents ~/.config ~/usr -type d | fzf)'
-bind -s -M insert \ct 'bash ~/bin/tmux-sessionizer'
-bind -s -M insert \cd 'bash ~/bin/tmux-killer'
-
-# theme
-set -g theme_color_scheme terminal-dark
-set -g fish_prompt_pwd_dir_length 1
-set -g theme_display_user yes
-set -g theme_hide_hostname no
-set -g theme_hostname always
-
-# aliases
-alias config-nvim "nvim ~/.config/nvim/lua/plugins.lua"
-alias config-fish "nvim ~/.config/fish/config.fish"
+alias n nvim
 alias g git
 alias gc gcloud
 alias pr "poetry run"

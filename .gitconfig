@@ -123,3 +123,6 @@
     path = ~/.gitconfig-user
 [branch]
 	autosetuprebase = always
+[user]
+	email = brenophp@gmail.com
+	name = Breno Silva

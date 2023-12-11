@@ -1,7 +1,33 @@
-**
+# Ignore everything
+/*
+
+# Not these directories
+!.config/
+!.scripts/
+
+# These directories
+.config/omf
+.config/op
+.config/gcloud
+.config/gh
+.config/glab-cli
+.config/github-copilot
+.config/iterm2
+.config/ncspot
+.config/.jira
+.config/fish/functions
+.config/fish/completions
+.config/fish/conf.d
+.config/fish/fish_plugins
+.config/fish/fish_variables
+.config/tmuxinator
+
+# Not these files
 !.gitignore
 !.gitignore-global
-!.config/fish/**/*
-!.config/nvim/**/*
 !.tmux*
-!.scripts/**/*
+!.config/tmuxinator/nvim.yml
+
+# These files
+.config/fish/personal_config.fish
+.config/fmn.json

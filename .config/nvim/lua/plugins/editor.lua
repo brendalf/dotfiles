@@ -32,7 +32,21 @@ return {
   {
     "ThePrimeagen/git-worktree.nvim",
     config = function()
-      require("git-worktree").setup()
+      local worktree = require("git-worktree")
+      worktree.setup()
+
+      worktree.on_tree_change(function(op, metadata)
+        if op == worktree.Operations.Switch then
+          vim.notify("Installing poetry...")
+
+          vim.fn.jobstart("poetry env info && poetry install && pyright_init", {
+            cwd = metadata.path,
+            on_exit = function()
+              vim.cmd("LspRestart")
+            end,
+          })
+        end
+      end)
     end,
     keys = {
       {

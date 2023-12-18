@@ -25,7 +25,7 @@ return {
     keys = {
       {
         mode = { "v", "n" },
-        "<Leader>m",
+        "<C-n>",
         "<cmd>MCstart<cr>",
         desc = "Create a selection for selected text or word under the cursor",
       },
@@ -37,7 +37,14 @@ return {
     "smjonas/inc-rename.nvim",
     cmd = "IncRename",
     keys = {
-      { "<Leader>rn", "<cmd>IncRename ", desc = "Replace variable / functions name" },
+      {
+        "<Leader>rn",
+        function()
+          return ":IncRename " .. vim.fn.expand("<cword>")
+        end,
+        expr = true,
+        desc = "Replace variable / functions name",
+      },
     },
     config = true,
   },

@@ -3,8 +3,8 @@
 selected=$(tmux ls | awk '{print $1}' | tr -d ':' | fzf)
 
 if [[ -z $selected ]]; then
-    exit 0
+	exit 0
 fi
 
-tmux kill-session -t $selected
-
+tmux switch-client -t base
+tmux kill-session -t "$selected"

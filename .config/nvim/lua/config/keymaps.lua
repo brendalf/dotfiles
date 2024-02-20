@@ -15,9 +15,6 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<C-s>", ":w<Return>")
 keymap.set("n", "<C-q>", ":q<Return>")
 
--- Buffers
-keymap.set("n", "<Leader>.", ":bdelete<Return>")
-
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")

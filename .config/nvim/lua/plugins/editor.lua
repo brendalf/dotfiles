@@ -73,15 +73,6 @@ return {
   {
     "folke/flash.nvim",
     enabled = false,
-    -- ---@type Flash.Config
-    -- opts = {
-    --   search = {
-    --     forward = true,
-    --     multi_window = false,
-    --     wrap = false,
-    --     incremental = true,
-    --   },
-    -- },
   },
   {
     "echasnovski/mini.hipatterns",
@@ -155,6 +146,13 @@ return {
           require("telescope.builtin").diagnostics()
         end,
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
+      },
+      {
+        ";b",
+        function()
+          require("telescope.builtin").buffers()
+        end,
+        desc = "Lists current buffer",
       },
       {
         ";s",

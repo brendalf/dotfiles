@@ -64,23 +64,19 @@ return {
   -- animations
   {
     "echasnovski/mini.animate",
-    enabled = false,
-    -- event = "VeryLazy",
-    -- opts = function(_, opts)
-    --   opts.scroll = {
-    --     enable = false,
-    --   }
-    -- end,
+    enabled = true,
+    event = "VeryLazy",
+    opts = function(_, opts)
+      opts.scroll = {
+        enable = false,
+      }
+    end,
   },
 
   -- buffer line
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
-    keys = {
-      { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
-      { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
-    },
     opts = {
       options = {
         mode = "tabs",

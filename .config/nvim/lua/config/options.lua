@@ -12,6 +12,7 @@ vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.shell = "fish"
+vim.g.python3_host_prog = "/usr/bin/python3"
 
 vim.opt.backup = false
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }

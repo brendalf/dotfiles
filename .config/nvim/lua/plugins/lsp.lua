@@ -7,6 +7,7 @@ return {
         "css-lsp",
         "luacheck",
         "pyright",
+        "ruff-lsp",
         "selene",
         "shellcheck",
         "shfmt",
@@ -25,6 +26,7 @@ return {
       ---@type lspconfig.options
       inlay_hints = { enabled = true },
       servers = {
+        ruff_lsp = {},
         pyright = {},
         cssls = {},
         tailwindcss = {
@@ -76,7 +78,14 @@ return {
           settings = {
             Lua = {
               workspace = {
-                checkThirdParty = false,
+                library = {
+                  [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                  [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+                  [vim.fn.stdpath("config") .. "/lua"] = true,
+                },
+              },
+              telemetry = {
+                enable = false,
               },
               completion = {
                 workspaceWord = true,
@@ -122,14 +131,15 @@ return {
                   ["unbalanced"] = "Opened",
                   ["unused"] = "Opened",
                 },
+                globals = { "vim" },
                 unusedLocalExclude = { "_*" },
               },
               format = {
                 enable = false,
                 defaultConfig = {
                   indent_style = "space",
-                  indent_size = "2",
-                  continuation_indent_size = "2",
+                  indent_size = "4",
+                  continuation_indent_size = "4",
                 },
               },
             },

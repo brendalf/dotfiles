@@ -38,9 +38,9 @@
 
   # commit
   ci = commit
-  cin = ci -n
-  ca = commit --amend
-  can = ca -n
+  ca = commit -a
+  cm = commit -m
+  cam = commit -am
 
   # reset
   rs = reset --soft HEAD^
@@ -58,10 +58,11 @@
   bm = branch -m
   bM = branch -M
   bd = "!~/.scripts/git/git-branch-delete.sh -d"
-  bx = "!~/.scripts/git/git-branch-delete.sh -D"
+  bD = "!~/.scripts/git/git-branch-delete.sh -D"
 
   # diff
   d = diff
+  dw = diff --word-diff
   dh = diff HEAD^
 
   # rebase
@@ -80,7 +81,7 @@
   mc = merge --continue
 
   # stash
-  ss = stash
+  ss = stash --all
   sa = "!~/.scripts/git/git-stash.sh apply"
   sd = "!~/.scripts/git/git-stash.sh drop"
   sp = "!~/.scripts/git/git-stash.sh pop"
@@ -92,16 +93,15 @@
   wr = worktree remove
 
   # fast conflict resolving
-  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; nvim `f`"
-  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  eu = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; nvim `f`"
+  au = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
+  # blame
+  blame = blame -w -C -C -C
 
   # still testing
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
   llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
-
-  # peco
-  df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
-  find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
 [hub]
   protocol = https
 [github]
@@ -118,11 +118,14 @@
 	required = true
 	process = git-lfs filter-process
 [ghq]
-    root = ~/.ghq
+  root = ~/.ghq
 [branch]
 	autosetuprebase = always
 [user]
-	email = brenophp@gmail.com
 	name = Breno Silva
-[include]
-    path = ~/.gitconfig-user
+[includeIf "gitdir:~/src/work/"]
+  path = ~/src/work/.gitconfig
+[includeIf "gitdir:~/src/oss/"]
+  path = ~/src/oss/.gitconfig
+[rerere]
+  enabled = true

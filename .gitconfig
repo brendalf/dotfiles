@@ -53,6 +53,9 @@
   # pull
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
 
+  # revert
+  rv = "!~/.scripts/git/git-revert.sh"
+
   # branch
   b = "!~/.scripts/git/git-branch.sh"
   bl = "!~/.scripts/git/git-branch-list.sh"

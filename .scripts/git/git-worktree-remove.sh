@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path_branch_to_delete=$(git worktree list | grep prunable | awk '{print $1}' | fzf)
+path_branch_to_delete=$(git worktree list | tail -n +2 | awk '{print $1}' | fzf)
 
 if [[ -z $path_branch_to_delete ]]; then
 	exit 0

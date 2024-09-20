@@ -117,7 +117,7 @@ return {
 
   {
     "nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
+    dependencies = { "hrsh7th/cmp-emoji", "L3MON4D3/LuaSnip" },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })

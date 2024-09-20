@@ -6,7 +6,6 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "css-lsp",
         "luacheck",
-        "pyright",
         "ruff-lsp",
         "selene",
         "shellcheck",
@@ -27,7 +26,6 @@ return {
       inlay_hints = { enabled = true },
       servers = {
         ruff_lsp = {},
-        pyright = {},
         cssls = {},
         tailwindcss = {
           root_dir = function(...)

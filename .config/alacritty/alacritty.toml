@@ -1,0 +1,15 @@
+import = ["alacritty-theme/themes/gruvbox_dark.toml"]
+
+[shell]
+program = "/opt/homebrew/bin/tmux"
+
+[window]
+decorations = "none"
+decorations_theme_variant = "dark"
+padding = { x = 20, y = 20 }
+dynamic_padding = true
+opacity = 0.8
+blur = true
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Retina" }

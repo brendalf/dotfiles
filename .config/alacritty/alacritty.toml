@@ -2,11 +2,13 @@ import = ["alacritty-theme/themes/gruvbox_dark.toml"]
 
 [shell]
 program = "/opt/homebrew/bin/tmux"
+args = ["new", "-t", "base"]
 
 [window]
 decorations = "none"
 decorations_theme_variant = "dark"
-padding = { x = 20, y = 20 }
+startup_mode = "Maximized"
+padding = { x = 10, y = 10 }
 dynamic_padding = true
 opacity = 0.8
 blur = true

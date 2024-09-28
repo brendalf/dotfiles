@@ -26,12 +26,13 @@ brew install golang
 brew install rust
 brew install gum
 brew install zoxide
+brew install alacritty
+brew install fish
 
 echo "Github Auth"
 gh auth login
 
-echo "Install and Configure Fish"
-brew install fish
+echo "Configure Fish"
 chsh -s $(which fish)
 
 echo "Install Fisher"

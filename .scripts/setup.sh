@@ -1,3 +1,5 @@
+!#/bin/bash
+
 echo "Installing Homebrew"
 cd
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -20,14 +22,16 @@ brew install neovim
 brew install luajit
 brew install ghq
 brew install exa
-brew install gnu-sed
-brew install nodejs
 brew install golang
 brew install rust
 brew install gum
 brew install zoxide
 brew install alacritty
 brew install fish
+
+echo "Install nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+nvm install 22
 
 echo "Github Auth"
 gh auth login

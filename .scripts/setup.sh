@@ -63,12 +63,8 @@ fish -c "fisher install jorgebucaran/nvm.fish"
 fish -c "fisher install IlanCosman/tide"
 
 echo "Configure Tmux"
-python3 -m pip install --user powerline-status
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-mv PowerlineSymbols.otf ~/.local/share/fonts/
-fc-cache -vf ~/.local/share/fonts/
-mkdir -p ~/.config/fontconfig/conf.d
-mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+echo "Configure tmuxinator for fish"
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.fish
 mv tmuxinator.fish ~/.config/fish/completions/

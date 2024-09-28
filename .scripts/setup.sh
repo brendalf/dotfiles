@@ -30,6 +30,10 @@ brew install alacritty
 brew install fish
 brew install nvm
 
+echo "Install nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+nvm install 22
+
 echo "Github Auth"
 gh auth login
 

@@ -6,29 +6,33 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.config/fish/personal_config.fish
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-echo "Installing general packages"
-brew install git
-brew install gh
-brew install tmux tmuxinator
-brew install ag
-brew install htop
-brew install ranger
-brew install fzf
-brew install ripgrep
-brew install bat
-brew install peco
-brew install tree-sitter
-brew install neovim
-brew install luajit
-brew install ghq
-brew install exa
-brew install golang
-brew install rust
+echo "Installing essential"
 brew install gum
 brew install zoxide
 brew install alacritty
 brew install fish
-brew install nvm
+brew install fisher
+brew install tmp
+brew install gh
+brew install tmux
+brew install fzf
+brew install htop
+brew install ranger
+brew install neovim
+
+echo "Install extras"
+brew install bat
+brew install ag
+brew install ripgrep
+brew install tree-sitter
+brew install exa
+brew install gh
+brew install tmuxinator
+
+echo "Installing languagues"
+brew install luajit
+brew install golang
+brew install rust
 
 echo "Install nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
@@ -39,12 +43,6 @@ gh auth login
 
 echo "Configure Fish"
 chsh -s $(which fish)
-
-echo "Install Fisher"
-curl -sL https://git.io/fisher >fisher.txt
-fish -c "source fisher.txt"
-fish -c "fisher install jorgebucaran/fisher"
-rm fisher.txt
 
 echo "Install Nerd Fonts"
 git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
@@ -58,12 +56,9 @@ cd ..
 rm -r nerd-fonts
 
 echo "Install Fisher Plugins"
-fish -c "fisher install gazorby/fish-abbreviation-tips"
-fish -c "fisher install jorgebucaran/nvm.fish"
-fish -c "fisher install IlanCosman/tide"
-
-echo "Configure Tmux"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fisher install gazorby/fish-abbreviation-tips
+fisher install jorgebucaran/nvm.fish
+fisher install IlanCosman/tide
 
 echo "Configure tmuxinator for fish"
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.fish

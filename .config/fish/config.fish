@@ -10,7 +10,12 @@ alias mux tmuxinator
 alias k kubectl
 alias kcx kubectx
 alias kns kubens
-alias gauth "gcloud auth application-default login"
+alias gauth "gcloud auth login"
+alias gauth-app "gcloud auth application-default login"
+
+if type -q fzf
+    fzf --fish | source
+end
 
 if type -q batcat
     alias b batcat
@@ -32,10 +37,5 @@ source ~/.config/fish/personal_config.fish
 
 fish_vi_key_bindings
 
-set --export --prepend PATH /Users/bbatistadasilva/bin
-set --export --prepend PATH /Users/bbatistadasilva/go/bin
-set --export --prepend PATH "/Users/bbatistadasilva/.cargo/bin"
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/bbatistadasilva/.rd/bin"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+set --export --prepend PATH /opt/homebrew/bin
+set -gx NVIM_DIR ~/.nvm

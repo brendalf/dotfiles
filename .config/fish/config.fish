@@ -5,6 +5,7 @@ alias g git
 alias gc gcloud
 alias pr "poetry run"
 alias v nvim
+alias r ranger
 alias t tmux
 alias mux tmuxinator
 alias k kubectl

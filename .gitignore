@@ -31,3 +31,4 @@
 # These files
 .config/fish/personal_config.fish
 .config/fmn.json
+.tmux/

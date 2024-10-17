@@ -33,10 +33,11 @@ if type -q exa
     alias lla "ll -a"
 end
 
+set --export --prepend PATH /usr/local/bin
+set --export --prepend PATH /opt/homebrew/bin
+set -gx NVIM_DIR ~/.nvm
+
 # personal config
 source ~/.config/fish/personal_config.fish
 
 fish_vi_key_bindings
-
-set --export --prepend PATH /opt/homebrew/bin
-set -gx NVIM_DIR ~/.nvm

@@ -5,9 +5,9 @@ program = "/opt/homebrew/bin/tmux"
 args = ["new", "-t", "base"]
 
 [window]
-decorations = "none"
+# decorations = "none"
 decorations_theme_variant = "dark"
-startup_mode = "Maximized"
+# startup_mode = "Maximized"
 padding = { x = 10, y = 10 }
 dynamic_padding = true
 opacity = 0.8

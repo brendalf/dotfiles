@@ -59,6 +59,7 @@ echo "Install Fisher Plugins"
 fisher install gazorby/fish-abbreviation-tips
 fisher install jorgebucaran/nvm.fish
 fisher install IlanCosman/tide
+fisher install jethrokuan/z
 
 echo "Configure tmuxinator for fish"
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.fish

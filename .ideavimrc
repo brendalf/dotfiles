@@ -1,0 +1,64 @@
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set which-key
+set textobj-entire
+set ReplaceWithRegister
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+set relativenumber
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+map <leader>db <Action>(ToggleLineBreakpoint)
+
+map <leader>cr <Action>(RenameElement)
+
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>p <Action>(SelectInProjectView)
+
+map gb <Action>(Annotate)
+map gbw <Action>(Vcs.ShowTabbedFileHistory)
+
+map <S-l> <Action>(NextTab)
+map <S-h> <Action>(PreviousTab)
+
+map [d <Action>(GotoNextError)
+map ]d <Action>(GotoNextError)
+
+map <C-/> <Action>(ActivateTerminalToolWindow)
+
+map <leader><Space> <Action>(GotoFile)
+map ;r <Action>(FindInPath)
+map ;t <Action>(ActivateTODOToolWindow)
+map ;s <Action>(FileStructurePopup)
+map ;b <Action>(Switcher)
+
+map bd <Action>(CloseEditor)
+map b. <Action>(CloseActiveTab)
+
+""" Multiple cursors ------------------------
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence

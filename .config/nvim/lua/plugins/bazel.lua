@@ -1,13 +1,6 @@
 return {
   { "bazelbuild/vim-bazel", dependencies = { "google/vim-maktaba" } },
   {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "alexander-born/cmp-bazel" },
-    opts = function(_, opts)
-      opts.sources = require("cmp").config.sources(vim.list_extend(opts.sources, { { name = "bazel" } }))
-    end,
-  },
-  {
     "alexander-born/bazel.nvim",
     config = function()
       -- Info: to make tab completion work copy '/etc/bash_completion.d/bazel-complete.bash' to '/etc/bash_completion.d/bazel'

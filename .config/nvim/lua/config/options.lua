@@ -10,5 +10,8 @@ vim.opt.backup = false
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 
 vim.opt.hlsearch = true
+vim.opt.incsearch = true
 vim.opt.inccommand = "split"
 vim.opt.wrap = true
+
+vim.opt.scrolloff = 8

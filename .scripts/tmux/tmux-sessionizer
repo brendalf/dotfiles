@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-git_repos=$(find ~/src -mindepth 2 -maxdepth 5 -type d -name .git -exec dirname {} \;)
-git_bare_repos=$(find ~/src -mindepth 2 -maxdepth 5 -type d -name worktrees -exec dirname {} \;)
-selected=$(echo -e "$git_repos\n$git_bare_repos" | fzf)
+selected=$(find ~/src -mindepth 2 -maxdepth 3 -type d -name .git -exec dirname {} \; | cat - <(echo ".config/nvim") | fzf)
 
 if [[ -z $selected ]]; then
   exit 0

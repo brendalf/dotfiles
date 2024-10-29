@@ -2,7 +2,7 @@ import = ["alacritty-theme/themes/gruvbox_dark.toml"]
 
 [shell]
 program = "/opt/homebrew/bin/tmux"
-args = ["new", "-t", "base"]
+args = ["new", "-A", "-t", "base"]
 
 [window]
 # decorations = "none"

@@ -35,6 +35,8 @@ end
 
 set --export --prepend PATH /usr/local/bin
 set --export --prepend PATH /opt/homebrew/bin
+set --export --prepend PATH ~/.bin
+
 set -gx NVIM_DIR ~/.nvm
 
 # personal config

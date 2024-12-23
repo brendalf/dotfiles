@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 selected=$(find ~/src -mindepth 2 -maxdepth 3 -type d -name .git -exec dirname {} \; | cat - <(echo ".config/nvim") | fzf)
 

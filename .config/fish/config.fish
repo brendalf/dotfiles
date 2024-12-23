@@ -36,6 +36,7 @@ end
 set --export --prepend PATH /usr/local/bin
 set --export --prepend PATH /opt/homebrew/bin
 set --export --prepend PATH ~/.bin
+set --export --prepend PATH ~/.scripts/tmux
 
 set -gx NVIM_DIR ~/.nvm
 

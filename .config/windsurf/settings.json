@@ -1,0 +1,15 @@
+{
+    "vim.useSystemClipboard": true,
+    "git.openRepositoryInParentFolders": "always",
+    "bazel.lsp.command": "starpls",
+    "editor.fontFamily": "FiraCode, Menlo, Monaco, 'Courier New', monospace",
+    "files.exclude": {
+        "**/node_modules": true
+    },
+    "search.exclude": {
+        ".git/**/*": true,
+        "**/.git": true
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "claudeCode.preferredLocation": "panel",
+}

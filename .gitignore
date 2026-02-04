@@ -13,3 +13,4 @@
 
 # These files
 .config/fish/personal_config.fish
+src/

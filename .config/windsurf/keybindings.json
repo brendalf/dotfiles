@@ -1,0 +1,56 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "space space",
+        "command": "workbench.action.quickOpen",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "; r",
+        "command": "workbench.action.findInFiles",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.save",
+        "when": "editorTextFocus"
+    }, {
+        "key": "; b",
+        "command": "workbench.action.showAllEditors",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "space |",
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "s l",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "s h",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "shift+h",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "shift+l",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "ctrl+/",
+        "command": "workbench.action.terminal.toggleTerminal"
+    }, {
+        "key": "space b d",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "space b p",
+        "command": "workbench.action.pinEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }, {
+        "key": "space b shift+p",
+        "command": "workbench.action.closeUnpinnedEditors",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }
+
+]

@@ -163,11 +163,6 @@ eval "$(jenv init -)"
 # Initialize zoxide (z command for directory jumping)
 eval "$(zoxide init zsh)"
 
-# Booking tools
-if command -v bk &> /dev/null; then
-  eval "$(bk completion zsh)"
-fi
-
 # Load local zshrc if it exists (for secrets)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 

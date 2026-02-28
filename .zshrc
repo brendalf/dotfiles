@@ -137,8 +137,12 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.scripts/tmux:$PATH"
 
-# Environment variables
+# NVM
 export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# Environment variables
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
@@ -166,3 +170,6 @@ fi
 
 # Load local zshrc if it exists (for secrets)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# bun completions
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"

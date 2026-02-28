@@ -9,9 +9,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Installing essential"
 brew install gum
 brew install zoxide
-brew install alacritty
-brew install fish
-brew install fisher
 brew install tmp
 brew install gh
 brew install tmux
@@ -27,22 +24,17 @@ brew install ripgrep
 brew install tree-sitter
 brew install exa
 brew install gh
-brew install tmuxinator
 
 echo "Installing languagues"
-brew install luajit
 brew install golang
 brew install rust
 
 echo "Install nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-nvm install 22
+nvm install lts
 
 echo "Github Auth"
 gh auth login
-
-echo "Configure Fish"
-chsh -s $(which fish)
 
 echo "Install Nerd Fonts"
 git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
@@ -55,12 +47,5 @@ chmod +x install.sh
 cd ..
 rm -r nerd-fonts
 
-echo "Install Fisher Plugins"
-fisher install gazorby/fish-abbreviation-tips
-fisher install jorgebucaran/nvm.fish
-fisher install IlanCosman/tide
-fisher install jethrokuan/z
-
-echo "Configure tmuxinator for fish"
-wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.fish
-mv tmuxinator.fish ~/.config/fish/completions/
+echo "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

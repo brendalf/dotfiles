@@ -105,17 +105,13 @@ fi
 # Aliases from fish config
 alias n=nvim
 alias g=git
-alias gc=gcloud
-alias pr="poetry run"
 alias v=nvim
 alias r=ranger
 alias t=tmux
-alias mux=tmuxinator
+
 alias k=kubectl
 alias kcx=kubectx
 alias kns=kubens
-alias gauth="gcloud auth login"
-alias gauth-app="gcloud auth application-default login"
 
 # Conditional aliases
 if command -v batcat &> /dev/null; then
@@ -146,22 +142,28 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Tool paths
-export PATH="$HOME/.codeium/windsurf/bin:$PATH"
-export PATH="$HOME/.opencode/bin:$PATH"
-
-# Personal config
+# MVN
 export PATH="/opt/mvn/bin:$PATH"
 
 # Tool initializations
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - --no-rehash)"
-eval "$(rbenv init - --no-rehash)"
-eval "$(jenv init -)"
+if command -v pyenv &>/dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init - --no-rehash)"
+fi
+
+if command -v rbenv &>/dev/null; then
+  eval "$(rbenv init - --no-rehash)"
+fi
+
+if command -v jenv &>/dev/null; then
+  eval "$(jenv init -)"
+fi
 
 # Initialize zoxide (z command for directory jumping)
-eval "$(zoxide init zsh)"
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
 
 # Load local zshrc if it exists (for secrets)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
